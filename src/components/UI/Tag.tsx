@@ -5,7 +5,7 @@ import '../../styles/index.scss';
 
 export interface TagProps
     extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    size: "tiny" | "sm" | "md";
+    size: "tiny" | "sm" | "md" | 'xl';
     href?: string;
     children: ReactNode;
 }
@@ -16,6 +16,7 @@ export const Tag = ({ size = 'sm', href, children, className, ...props }: TagPro
             'tag__tiny': size === 'tiny',
             'tag__sm': size === 'sm',
             'tag__md': size === 'md',
+            'tag__xl': size === 'xl',
         })}
             {...props}
         >{

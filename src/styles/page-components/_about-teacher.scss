@@ -1,0 +1,16 @@
+.about-teacher {
+  &__container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__wrapper {
+      display: flex;
+  }
+
+  .aboutme-img {
+      width: 500px;
+      height: 500px;
+      background-size: cover;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 import '../styles/index.scss';
 import cn from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HeaderMenu } from '../common/menu.interface';
 import { ReactComponent as LogoIcon } from '../images/logo.svg';
 import { FaTelegramPlane } from 'react-icons/fa';
@@ -23,13 +23,13 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
           <LogoIcon />
         </Link>
         <nav className={cn('header__nav')}>
-          <Link to='/' className={cn('header__item')}>{Home}</Link>
-          <Link to='/about' className={cn('header__item')}>{About}</Link>
-          <Link to='/services' className={cn('header__item')}>{Services}</Link>
-          <Link to='/payment' className={cn('header__item')}>{Payment}</Link>
-          <Link to='/enroll' className={cn('header__item')}>{Enroll}</Link>
-          <Link to='/contacts' className={cn('header__item')}>{Contacts}</Link>
-          <Link to='/reviews' className={cn('header__item')}>{Reviews}</Link>
+          <NavLink to='/' className={cn('header__item')}>{Home}</NavLink>
+          <NavLink to='/about' className={cn('header__item')}>{About}</NavLink>
+          <NavLink to='/services' className={cn('header__item')}>{Services}</NavLink>
+          <NavLink to='/payment' className={cn('header__item')}>{Payment}</NavLink>
+          <NavLink to='/enroll' className={cn('header__item')}>{Enroll}</NavLink>
+          <NavLink to='/contacts' className={cn('header__item')}>{Contacts}</NavLink>
+          <NavLink to='/reviews' className={cn('header__item')}>{Reviews}</NavLink>
         </nav>
         <div className='header__social'>
           <a href="/" className="header__link">

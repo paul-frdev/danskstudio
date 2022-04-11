@@ -12,7 +12,7 @@ import { MainTitle } from './MainTitle';
 export const Services = () => {
   return (
     <section className='services'>
-      <MainTitle title='after'>
+      <MainTitle title='after' position='left'>
         <span> Какие услуги
           <br/>
           предлагает студия</span>

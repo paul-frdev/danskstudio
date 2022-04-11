@@ -12,7 +12,7 @@ import { MainTitle } from './MainTitle';
 export const About = () => {
   return (
     <section className='about'>
-      <MainTitle title='before' position='center'>
+      <MainTitle title='before'>
         <span>Обо мне</span>
       </MainTitle>
       <div className="about__container">

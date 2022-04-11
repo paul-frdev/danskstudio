@@ -23,7 +23,7 @@ export const MainForm = () => {
   return (
     <section className='form'>
       <div>
-        <MainTitle title='after'>
+        <MainTitle title='after' position='left'>
           <span>Узнать расписание</span>
         </MainTitle>
       </div>
