@@ -1,0 +1,43 @@
+.top-lesson {
+  max-height: calc(100vh - 120px);
+  padding-top: 10px;
+  margin-bottom: 60px;
+  &__container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lesson-left {
+    &__title {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 41px;
+      margin-bottom: 30px;
+      color: var(--color-yellow);
+      span {
+        color: var(--color-red);
+      }
+    }
+    &__text {
+      max-width: 544px;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+    &__btn {
+      min-width: 500px;
+      background-color: inherit;
+      height: 51px;
+      border-radius: 15px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      cursor: pointer;
+    }
+  }
+}

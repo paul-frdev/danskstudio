@@ -1,0 +1,40 @@
+.reviews {
+  margin-bottom: 60px;
+  &__container {
+    max-width: 1300px;
+    max-height: 500px;
+    padding: 0 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+
+  .button-next {
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: var(--color-red);
+    }
+  }
+  .button-prev {
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: var(--color-red);
+    }
+  }
+  .slick-prev {
+    left: -30px;
+    &::before {
+        content: '';
+    }
+  }
+  .slick-next {
+    right: -10px;
+    &::before {
+        content: '';
+    }
+  }
+  .slick-dots {
+      bottom: -57px;
+  }
+}

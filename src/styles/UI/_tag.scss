@@ -1,0 +1,18 @@
+.tag {
+  &__tiny {
+    padding: 3px 5px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  &__sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__md {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}

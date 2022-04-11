@@ -1,0 +1,38 @@
+.button {
+  height: 42px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+
+  &__background {
+    background-color: var(--bg-yellow-light);
+  }
+
+  &__color {
+    border-color: var(--border-color);
+  }
+  &__shadow {
+    box-shadow: -4px -4px 20px #f4e8da, 4px 4px 20px #f4e8da;
+  }
+
+  &__color {
+    &--red {
+      border: solid var(--color-red);
+    }
+    &--yellow {
+      border: solid var(--bg-yellow);
+    }
+  }
+
+  &__border {
+    &--small {
+      border-width: 1px;
+    }
+    &--middle {
+      border-width: 3px;
+    }
+  }
+}

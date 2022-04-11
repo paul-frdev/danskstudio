@@ -1,0 +1,29 @@
+.input {
+  max-width: 346px;
+  height: 41px;
+  box-sizing: border-box;
+  box-shadow: inset 4px 4px 10px #e6d2bb;
+  border-radius: 10px;
+  border: none;
+
+  &__wrapper {
+    position: relative;
+
+    input {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .error-message {
+      position: absolute;
+      color: var(--color-red);
+      bottom: -20px;
+      left: 0;
+    }
+    .input {
+        &__error {
+            border: 2px solid var(--bg-red);
+        }
+    }
+  }
+}
