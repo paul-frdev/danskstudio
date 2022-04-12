@@ -1,0 +1,9 @@
+.levels-services {
+  &__block {
+    display: flex;
+  }
+  &__cart {
+      width: 320px;
+      min-height: 222px;
+  }
+}

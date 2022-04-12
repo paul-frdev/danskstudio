@@ -10,7 +10,7 @@ import { SlickPrevArrow } from './UI/SlickPrevArrow';
 interface UISliderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     children: ReactNode
 }
-const UISlider = ({children, className, ...props}: UISliderProps): JSX.Element => {
+const UISlider = ({ children, className, ...props }: UISliderProps): JSX.Element => {
     const [, setActiveSlideIndex] = useState(0);
     const sliderSettings = {
         dots: true,

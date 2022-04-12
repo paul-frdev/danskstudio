@@ -15,7 +15,9 @@ export const Reviews = () => {
         <span>Отзывы о dansk studio</span>
       </MainTitle>
       <div className="reviews__container">
-        <UISlider>
+        <UISlider
+
+        >
           <div>
             <img src={reviewOne} alt="reviewOne" />
           </div>
