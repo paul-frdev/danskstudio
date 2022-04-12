@@ -63,7 +63,7 @@ export const About = () => {
                 <Ptag tag='sm'>Дипломную работу по теме произношение датского языка сдала на высший бал (12).</Ptag>
               </div>
             </div>
-            <Tag href='/' size='md' className='about__link'>
+            <Tag href='/about' size='md' className='about__link'>
               О повышении квалификации и моей деятельности
               <BsChevronRight />
             </Tag>

@@ -1,16 +1,59 @@
 .about-teacher {
+  margin-bottom: 60px;
   &__container {
     max-width: 1400px;
     padding: 0 15px;
     margin: 0 auto;
   }
   &__wrapper {
-      display: flex;
+    display: flex;
   }
 
   .aboutme-img {
-      width: 500px;
-      height: 500px;
-      background-size: cover;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+  }
+  &__list {
+    margin-bottom: 50px;
+
+    &-title {
+      margin-left: 26px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .list-block {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+        fill: var(--color-red);
+        margin-right: 10px;
+      }
+      &--second {
+        padding-left: 11px;
+      }
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      min-width: 400px;
+      min-height: 55px;
+      text-transform: uppercase;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
   }
 }

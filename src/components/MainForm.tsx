@@ -80,7 +80,7 @@ export const MainForm = () => {
               border='sm'
               boxShadow='yellow'
             >
-              Submit
+              Отправить
             </Button>
           </div>
         </form>
