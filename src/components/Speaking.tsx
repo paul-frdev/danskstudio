@@ -5,7 +5,7 @@ import { Ptag } from './UI/Ptag'
 
 export const Speaking = () => {
   return (
-    <div className='speaking'>
+    <section className='speaking'>
       <div className="speaking__container">
         <CartList className='speaking__cart'>
           <Htag tag='h2'>1. Авторский курс по произношению “Основы произношения датского языка. Постановка
@@ -38,6 +38,6 @@ export const Speaking = () => {
             занятия в группе.</Ptag>
         </CartList>
       </div>
-    </div>
+    </section>
   )
 }

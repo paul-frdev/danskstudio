@@ -5,7 +5,7 @@ import { Ptag } from './UI/Ptag'
 
 export const Lessons = () => {
   return (
-    <div className='lessons'>
+    <section className='lessons'>
       <div className="lessons__container">
         <CartList className="lessons__cart">
           <Htag tag='h2'>Занятия под индивидуальный запрос, </Htag>
@@ -23,6 +23,6 @@ export const Lessons = () => {
           <Ptag tag='md'>В выходные дни 9.00-12.00 - 800 крон за 1 занятие</Ptag>
         </CartList>
       </div>
-    </div>
+    </section>
   )
 }

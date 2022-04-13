@@ -1,4 +1,4 @@
-.speaking {
+.groups {
   position: relative;
   &::before {
     position: absolute;
@@ -31,7 +31,6 @@
     padding: 0 15px;
     margin: 0 auto;
   }
-
   &__cart {
     max-width: 1350px;
     width: 100%;
@@ -58,6 +57,17 @@
     }
     &:not(:last-child) {
       margin-bottom: 60px;
+    }
+
+    div {
+      font-weight: 600;
+      color: var(--color-black);
+      font-size: 20px;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
     }
   }
   h2 {
