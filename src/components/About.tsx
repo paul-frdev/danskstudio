@@ -37,19 +37,19 @@ export const About = () => {
               <div>
                 <AiOutlineCheck />
               </div>
-              <Ptag tag='sm'><span>МГПИ им. Н. К. Крупской</span> г. Йошкар-Ола, р-ка Марий- Эл, Россия. Факультет иностранных языков. Английская филология.</Ptag>
+              <Ptag tag='md'><span>МГПИ им. Н. К. Крупской</span> г. Йошкар-Ола, р-ка Марий- Эл, Россия. Факультет иностранных языков. Английская филология.</Ptag>
             </div>
             <div className='about__cart-block'>
               <AiOutlineCheck />
-              <Ptag tag='sm'><span>Sprogcenter Nordsjælland</span>, Hillerød.</Ptag>
+              <Ptag tag='md'><span>Sprogcenter Nordsjælland</span>, Hillerød.</Ptag>
             </div>
             <div className='about__cart-block'>
               <div>
                 <AiOutlineCheck />
               </div>
               <div>
-                <Ptag tag='sm'><span>University College Sjælland</span></Ptag>
-                <Ptag tag='sm'>Учительская семинария: датский язык и датский язык как второй для детей-билингвов в общеобразовательных школах Дании.</Ptag>
+                <Ptag tag='md'><span>University College Sjælland</span></Ptag>
+                <Ptag tag='md'>Учительская семинария: датский язык и датский язык как второй для детей-билингвов в общеобразовательных школах Дании.</Ptag>
               </div>
             </div>
             <div className='about__cart-block'>
@@ -57,10 +57,10 @@ export const About = () => {
                 <AiOutlineCheck />
               </div>
               <div>
-                <Ptag tag='sm'><span>Датский педагогический университет по специальности преподаватель датского языка взрослым иностранцам.
+                <Ptag tag='md'><span>Датский педагогический университет по специальности преподаватель датского языка взрослым иностранцам.
                 </span>DPU, Århus Universitet, København. Uddannelsen til underviser i dansk som andet-og fremmedsprog til voksne og unge.
                 </Ptag>
-                <Ptag tag='sm'>Дипломную работу по теме произношение датского языка сдала на высший бал (12).</Ptag>
+                <Ptag tag='md'>Дипломную работу по теме произношение датского языка сдала на высший бал (12).</Ptag>
               </div>
             </div>
             <Tag href='/about' size='md' className='about__link'>

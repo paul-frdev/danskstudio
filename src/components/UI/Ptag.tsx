@@ -8,15 +8,15 @@ export interface PtagProps
     HTMLAttributes<HTMLParagraphElement>,
     HTMLParagraphElement
     > {
-    tag: "sm" | "md" | "xl";
+    tag: "md" | "md" | "xl";
     children: ReactNode;
 }
-export const Ptag = ({ tag = 'sm', children, className }: PtagProps): JSX.Element => {
+export const Ptag = ({ tag = 'md', children, className }: PtagProps): JSX.Element => {
     return (
         <p className={cn('p', className, {
             'p--md': tag === 'md',
             'p--xl': tag === 'xl',
-            'p--sm': tag === 'sm'
+            'p--sm': tag === 'md'
         })}>
             {children}
         </p>

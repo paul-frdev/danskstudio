@@ -65,63 +65,63 @@ export const AboutTeacher = () => {
               </Htag>
               <div className='list-block list-block--second'>
                 <span>1.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Kursus i voksenpædagogik. University College Sjælland.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>2.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Kursus i voksenpædagogik. University College Sjælland.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>3.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Smartboardkursus.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>4.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Kursus i blended learning.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>5.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Læsning på L1 (første sprog) og L 2 (andet sprog) ved Kirsten Andersen.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>6.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Taskbaseret undervisning. Hvordan arbejder vi med mundtlighed i danskundervisningen?
                   Ved Christina Helleshøj og Hanna Niemann.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>7.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Arbejdsmarkedsrettet dansk. Metoder til sproglæring ift temaet Det danske arbejdsmarked
                   og dansk arbejdskultur ved Bente Arildsen.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>8.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Thinking approach ved Aleksander Sokol og Elina Maslo.
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>9.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   Cooperative learning i DSA- undervisningen. (Pædagogisk weekend).
                 </Ptag>
               </div>
               <div className='list-block list-block--second'>
                 <span>10.</span>
-                <Ptag tag='sm'>
+                <Ptag tag='md'>
                   The flipped classroom ved David Jørgensen.
                 </Ptag>
               </div>
