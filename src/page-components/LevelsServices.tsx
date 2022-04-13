@@ -25,24 +25,24 @@ export const LevelsServices = () => {
       <div className="levels-services__container">
         <div className='levels-services__block'>
           <NavLink
-            to='lessons'
+            to='speaking'
             className='link'
           >
             <CartList
               className='levels-services__cart'
 
             >
-              <img src={lessons} alt="lessons" />
+              <img src={lessons} alt="speaking" />
               <Htag tag='h3'>АВТОРСКИЕ КУРСЫ
                 ПО ПРОИЗНОШЕНИЮ</Htag>
             </CartList>
           </NavLink>
-          <NavLink to='speaking' className='link'>
+          <NavLink to='lessons' className='link'>
             <CartList
               className='levels-services__cart'
 
             >
-              <img src={speaking} alt="speaking" />
+              <img src={speaking} alt="lessons" />
               <Htag tag='h3'>индивидуальные занятия</Htag>
             </CartList>
           </NavLink>
