@@ -10,6 +10,7 @@ import { ContactsPage } from '../pages/ContactsPage';
 import { EnrollPage } from '../pages/EnrollPage';
 import { MainPage } from '../pages/MainPage';
 import { PaymentPage } from '../pages/PaymentPage';
+import { Questionary } from '../pages/Questionary';
 import { ReviewsPage } from '../pages/ReviewsPage';
 import { ServicesPage } from '../pages/ServicesPage';
 
@@ -25,7 +26,7 @@ export const MainRoutes = () => {
           <Route path='groups' element={<Groups />} />
         </Route>
         <Route path='payment' element={<PaymentPage />} />
-        <Route path='enroll' element={<EnrollPage />} />
+        <Route path='questionary' element={<Questionary />} />
         <Route path='contacts' element={<ContactsPage />} />
         <Route path='reviews' element={<ReviewsPage />} />
         <Route path='*' element={<NotFound />} />

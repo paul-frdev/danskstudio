@@ -27,7 +27,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
           <NavLink to='/about' className={cn('header__item')}>{About}</NavLink>
           <NavLink to='/services' className={cn('header__item')}>{Services}</NavLink>
           <NavLink to='/payment' className={cn('header__item')}>{Payment}</NavLink>
-          <NavLink to='/enroll' className={cn('header__item')}>{Enroll}</NavLink>
+          <NavLink to='/questionary' className={cn('header__item')}>{Enroll}</NavLink>
           <NavLink to='/contacts' className={cn('header__item')}>{Contacts}</NavLink>
           <NavLink to='/reviews' className={cn('header__item')}>{Reviews}</NavLink>
         </nav>
