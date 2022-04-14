@@ -8,8 +8,8 @@ import { RiWhatsappFill } from 'react-icons/ri';
 import { FaInstagramSquare } from 'react-icons/fa';
 import { BsFacebook } from 'react-icons/bs';
 import { SiMastercard } from 'react-icons/si'
-import {SiVisa} from 'react-icons/si';
-import {FaApplePay} from 'react-icons/fa';
+import { SiVisa } from 'react-icons/si';
+import { FaApplePay } from 'react-icons/fa';
 
 interface FooterProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 
@@ -20,7 +20,7 @@ export const Footer = ({ className }: FooterProps): JSX.Element => {
 
   return (
     <footer className={cn('footer', className)}>
-      <div className="footer__container">
+      {/* <div className="footer__container">
         <div className="footer__top">
           <Link to='/' className="footer__logo">
             <LogoIcon />
@@ -52,16 +52,15 @@ export const Footer = ({ className }: FooterProps): JSX.Element => {
           </div>
           <div className="footer__payment">
             <h4>Оплата</h4>
-          <SiMastercard className='mastercart'/>
-           <SiVisa className='visa'/>
-           <FaApplePay className='apple'/>
+            <SiMastercard className='mastercart' />
+            <SiVisa className='visa' />
+            <FaApplePay className='apple' />
           </div>
         </div>
         <div className="footer__botom">
           <p>Copyright © <span>{new Date().getFullYear()}</span> «Dansk Studio». Студия датского языка</p>
         </div>
-      </div>
-
+      </div> */}
     </footer >
   )
 }

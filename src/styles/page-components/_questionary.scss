@@ -1,7 +1,83 @@
 .questionary {
-    &__container {
-        max-width: 1400px;
-        padding: 0 15px;
-        margin: 0 auto;
+  &__container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .cart-list {
+      margin-bottom: 30px;
+      p {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
     }
+    button {
+      width: 160px;
+      height: 48px;
+    }
+  }
+
+  .input__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    &:last-child {
+      display: flex;
+      label {
+        max-width: 100%;
+        width: 100%;
+      }
+      input[type="checkbox" i] {
+        height: 20px;
+        width: 20px;
+        max-width: 20px;
+        background-color: var(--bg-yellow);
+      }
+    }
+
+    label {
+      margin-bottom: 7px;
+    }
+
+    input {
+      max-width: 100%;
+      width: 100%;
+      box-shadow: none;
+      border: 1px solid #c4c4c4;
+      border-radius: 10px;
+      padding: 5px 10px;
+      height: 45px;
+    }
+
+    .button {
+      display: inline-block;
+    }
+  }
+
+  .checkbox {
+    margin-bottom: 30px;
+    input {
+    }
+  }
+  .form-text {
+    text-align: center;
+  }
+
+  .input__wrapper .input__error {
+    border: 2px solid var(--bg-red);
+  }
 }

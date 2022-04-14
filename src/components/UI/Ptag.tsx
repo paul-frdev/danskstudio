@@ -8,7 +8,7 @@ export interface PtagProps
     HTMLAttributes<HTMLParagraphElement>,
     HTMLParagraphElement
     > {
-    tag: "md" | "md" | "xl";
+    tag: "sm" | "md" | "xl";
     children: ReactNode;
 }
 export const Ptag = ({ tag = 'md', children, className }: PtagProps): JSX.Element => {
@@ -16,7 +16,7 @@ export const Ptag = ({ tag = 'md', children, className }: PtagProps): JSX.Elemen
         <p className={cn('p', className, {
             'p--md': tag === 'md',
             'p--xl': tag === 'xl',
-            'p--sm': tag === 'md'
+            'p--sm': tag === 'sm'
         })}>
             {children}
         </p>
