@@ -17,7 +17,7 @@ export const footerMenu = [
     'Договор оферты'
 ]
 
-export const HeaderMenu: IMenu =  {
+export const INavMenu: IMenu =  {
     Home: 'Главная',
     About: 'Обо мне',
     Services: 'Услуги',

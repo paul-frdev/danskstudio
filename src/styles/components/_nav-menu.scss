@@ -1,0 +1,17 @@
+.nav {
+  &__item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--color-black-light);
+    transition: color 0.2s ease-out;
+
+    &:not(:last-child) {
+      margin-right: 31px;
+    }
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

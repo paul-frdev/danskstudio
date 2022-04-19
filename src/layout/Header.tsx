@@ -1,45 +1,70 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react';
 import '../styles/index.scss';
 import cn from 'classnames';
-import { Link, NavLink } from 'react-router-dom';
-import { HeaderMenu } from '../common/menu.interface';
+import { Link, useParams, useRoutes } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../images/logo.svg';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaViber } from 'react-icons/fa';
+import { CgMenuGridR } from 'react-icons/cg';
+import { motion } from 'framer-motion';
+import { MdOutlineCloseFullscreen } from 'react-icons/md';
+import { NavMenu } from '../components/NavMenu';
+
 interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 
 }
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 
+  const [isOpened, setIsOpened] = useState(false);
+  const params = useParams();
 
-  const { Home, About, Services, Payment, Enroll, Reviews, Contacts } = HeaderMenu;
+  useEffect(() => {
+    setIsOpened(false)
+  }, [params])
+
+
+  const variants = {
+    opened: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        stiffness: 20
+      }
+    },
+    closed: {
+      opacity: 0,
+      x: '100%',
+    }
+  }
 
   return (
-    <header className={cn('header')} {...props}>
+    <header className={cn(className, 'header')} {...props}>
       <div className="header__container">
         <Link to="/" className={cn('header__logo')}>
           <LogoIcon />
         </Link>
-        <nav className={cn('header__nav')}>
-          <NavLink to='/' className={cn('header__item')}>{Home}</NavLink>
-          <NavLink to='/about' className={cn('header__item')}>{About}</NavLink>
-          <NavLink to='/services' className={cn('header__item')}>{Services}</NavLink>
-          <NavLink to='/payment' className={cn('header__item')}>{Payment}</NavLink>
-          <NavLink to='/questionary' className={cn('header__item')}>{Enroll}</NavLink>
-          <NavLink to='/contacts' className={cn('header__item')}>{Contacts}</NavLink>
-          <NavLink to='/reviews' className={cn('header__item')}>{Reviews}</NavLink>
-        </nav>
+        <CgMenuGridR className='menu-icon' onClick={() => setIsOpened(true)} />
+        <motion.div
+          className='mobile-menu'
+          variants={variants}
+          initial={'closed'}
+          animate={isOpened ? 'opened' : 'closed'}
+        >
+          <NavMenu />
+          <MdOutlineCloseFullscreen className='mobile-menu__close' onClick={() => setIsOpened(false)} />
+        </motion.div>
+        <NavMenu />
         <div className='header__social'>
           <a href="/" className="header__link">
-            <FaTelegramPlane className='header__icon'/>
+            <FaTelegramPlane className='header__icon' />
           </a>
           <a href="/" className="header__link">
-            <FaWhatsapp className='header__icon'/>
+            <FaWhatsapp className='header__icon' />
           </a>
           <a href="/" className="header__link">
-            <FaViber className='header__icon'/>
+            <FaViber className='header__icon' />
           </a>
         </div>
       </div>

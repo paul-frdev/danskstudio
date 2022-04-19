@@ -13,22 +13,6 @@
     margin: 0 auto;
   }
 
-  &__item {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    color: var(--color-black-light);
-    transition: color 0.2s ease-out;
-
-    &:not(:last-child) {
-      margin-right: 31px;
-    }
-
-    &:hover {
-      color: #000;
-    }
-  }
-
   &__link {
     &:not(:last-child) {
       margin-right: 10px;
@@ -43,5 +27,109 @@
   .active {
     font-weight: 500;
     color: var(--color-black);
+  }
+
+  .menu-icon {
+    display: none;
+    width: 45px;
+    height: 45px;
+    path {
+      fill: #c90c31;
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    &__close {
+      display: flex;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      fill: #c90c31;
+    }
+  }
+}
+
+@media screen and(max-width: 1226px) {
+  .header {
+    &__container {
+      grid-template-columns: 180px 1fr 50px;
+      grid-template-areas: "logo social menuIcon";
+      gap: 20px;
+    }
+
+    .menu-icon {
+      display: block;
+      grid-area: menuIcon;
+    }
+
+    &__social {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: 1120px) {
+  .header {
+    &__container {
+      grid-template-columns: 1fr 130px 50px;
+      grid-template-areas: "logo social menuIcon";
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .menu-icon {
+      grid-area: menuIcon;
+    }
+    &__social {
+      display: block;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      background-color: #fff;
+      .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       &__item {
+        margin: 0 auto;
+        font-weight: 500;
+        padding: 13px 0;
+        font-size: 1.5rem;
+        &:first-child {
+          padding-top: 60px;
+        }
+       }
+      }
+
+      &__close {
+        position: fixed;
+        z-index: 11;
+        top: 23px;
+        right: 46px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 405px) {
+  .header {
+    &__container {
+      grid-template-columns: 1fr 50px;
+      grid-template-areas: "header menuIcon";
+      gap: 20px;
+    }
+    &__social {
+      display: none;
+    }
   }
 }
