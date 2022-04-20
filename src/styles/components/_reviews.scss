@@ -37,4 +37,19 @@
   .slick-dots {
       bottom: -57px;
   }
+
+  @media screen and(max-width: 600px) {
+    &__title {
+      margin: 20px 0 !important;
+      span {
+        font-size: 28px !important;
+      }
+    }
+  }
+  @media screen and(max-width: 400px) {
+    &__container {
+      padding: 0 5px;
+    }
+  }
 }
+

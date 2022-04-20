@@ -9,7 +9,7 @@ export const Step = () => {
   return (
     <section className='step'>
       <div>
-        <MainTitle title='before' position='right'>
+        <MainTitle className='step__title' title='before' position='right'>
           <span>
             Сделайте первый шаг
             <br/>

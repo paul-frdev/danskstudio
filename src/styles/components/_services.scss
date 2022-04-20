@@ -74,3 +74,42 @@
     border-radius: 20px;
   }
 }
+
+@media screen and(max-width: 910px) {
+  .services {
+    &__title {
+      margin: 25px 0 !important;
+    }
+    &__wrapper {
+      max-width: 1249px;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      gap: 20px;
+    }
+
+    &__cart {
+      max-width: 430px;
+    }
+  }
+}
+
+@media screen and(max-width: 910px) {
+  .services {
+    &__title {
+      span {
+        font-size: 26px !important;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 410px) {
+  .services {
+    &::before {
+      display: none;
+    }
+    &__link {
+      padding: 5px 15px;
+    }
+  }
+}

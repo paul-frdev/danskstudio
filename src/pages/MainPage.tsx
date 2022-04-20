@@ -9,12 +9,12 @@ import { TopLesson } from '../components/TopLesson'
 export const MainPage = () => {
     return (
         <>
-            {/* <TopLesson />
+            <TopLesson />
             <About />
             <Services />
             <Step />
             <MainForm />
-            <Reviews/> */}
+            <Reviews/>
         </>
     )
 }

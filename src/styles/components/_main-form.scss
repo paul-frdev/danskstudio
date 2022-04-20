@@ -61,3 +61,50 @@
     }
   }
 }
+
+@media screen and(max-width: 1090px) {
+  .form {
+    .main-form {
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+      &__wrapper {
+        flex-direction: column;
+
+        .input-block {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 20px;
+          &:nth-child(1) {
+            margin-right: 0;
+          }
+          &:nth-child(3) {
+            margin-right: 0;
+          }
+
+          .input {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+
+        .input__wrapper {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 610px) {
+  .form {
+    &__title {
+      margin: 20px 0 !important;
+      span {
+        margin-left: 5px;
+        font-size: 30px !important;
+      }
+    }
+  }
+}

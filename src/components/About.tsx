@@ -12,7 +12,7 @@ import { MainTitle } from './MainTitle';
 export const About = () => {
   return (
     <section className='about'>
-      <MainTitle title='before'>
+      <MainTitle className='about__title' title='before'>
         <span>Обо мне</span>
       </MainTitle>
       <div className="about__container">
@@ -20,7 +20,7 @@ export const About = () => {
           <img src={about} alt="about" />
           <p className='about__img-text'>основатель школы</p>
         </div>
-        <div>
+        <div className='about__content'>
           <Ptag tag='md' className='about__text'>
             Рада приветствовать всех небезразличных к иностранным языкам!
             Меня зовут Олеся, и я - квалифицированный преподаватель датского языка.

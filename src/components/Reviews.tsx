@@ -11,7 +11,7 @@ import { MainTitle } from './MainTitle';
 export const Reviews = () => {
   return (
     <section className='reviews'>
-      <MainTitle title='before' position='right'>
+      <MainTitle className='reviews__title' title='before' position='right'>
         <span>Отзывы о dansk studio</span>
       </MainTitle>
       <div className="reviews__container">

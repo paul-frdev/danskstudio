@@ -41,3 +41,50 @@
     }
   }
 }
+
+@media screen and (max-width: 1155px) {
+  .top-lesson {
+    .lesson-left {
+      &__title {
+        font-size: 26px;
+      }
+      &__btn {
+        min-width: 381px;
+      }
+    }
+    .lesson-right {
+
+      img {
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+
+@media screen and(max-width: 895px) {
+  .top-lesson {
+    &__container {
+      margin-top: 60px;
+    }
+    .lesson-right {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: 402px) {
+  .top-lesson {
+    .lesson-left {
+      &__text {
+        font-size: 18px;
+      }
+
+      &__btn {
+        min-width: 250px;
+        font-size: 12px;
+      }
+
+    }
+  }
+}
