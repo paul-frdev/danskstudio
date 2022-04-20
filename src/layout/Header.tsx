@@ -52,6 +52,9 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
           initial={'closed'}
           animate={isOpened ? 'opened' : 'closed'}
         >
+          <Link to="/" className={cn('header__logo')}>
+            <LogoIcon />
+          </Link>
           <NavMenu />
           <MdOutlineCloseFullscreen className='mobile-menu__close' onClick={() => setIsOpened(false)} />
         </motion.div>

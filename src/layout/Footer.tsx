@@ -20,7 +20,7 @@ export const Footer = ({ className }: FooterProps): JSX.Element => {
 
   return (
     <footer className={cn('footer', className)}>
-      {/* <div className="footer__container">
+      <div className="footer__container">
         <div className="footer__top">
           <Link to='/' className="footer__logo">
             <LogoIcon />
@@ -60,7 +60,7 @@ export const Footer = ({ className }: FooterProps): JSX.Element => {
         <div className="footer__botom">
           <p>Copyright © <span>{new Date().getFullYear()}</span> «Dansk Studio». Студия датского языка</p>
         </div>
-      </div> */}
+      </div>
     </footer >
   )
 }
