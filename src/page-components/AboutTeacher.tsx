@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { MainTitle } from '../components/MainTitle';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { Ptag } from '../components/UI/Ptag';
@@ -7,11 +7,18 @@ import { Htag } from '../components/UI/Htag';
 import aboutMe from '../images/about-bg.jpg';
 import '../styles/index.scss';
 import { Button } from '../components';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 export const AboutTeacher = () => {
+
+  const { height, width } = useWindowDimensions();
+
   return (
     <section className='about-teacher'>
-      <MainTitle>О ПРЕПОДАВАТЕЛЕ ONLINE-ШКОЛЫ DANSK STUDIO</MainTitle>
+      {width < 1020 ? <MainTitle className='about-teacher__title'>О ПРЕПОДАВАТЕЛЕ ONLINE-ШКОЛЫ <br /> DANSK STUDIO</MainTitle>
+        :
+        <MainTitle>О ПРЕПОДАВАТЕЛЕ ONLINE-ШКОЛЫ DANSK STUDIO</MainTitle>
+      }
       <div className="about-teacher__container">
         <div className="about-teacher__wrapper">
           <div>

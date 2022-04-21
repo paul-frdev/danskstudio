@@ -56,4 +56,42 @@
       }
     }
   }
+
+  @media screen and(max-width: 900px) {
+    &__title {
+      font-size: 32px;
+    }
+    .aboutme-img {
+      display: none;
+    }
+
+    &__btns {
+      flex-direction: column;
+      button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 600px) {
+    &__title {
+      font-size: 25px;
+      margin: 20px 0;
+    }
+  }
+
+  @media screen and(max-width: 475px) {
+    &__btns {
+      button {
+        min-width: 300px;
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+    &__title {
+      font-size: 17px;
+    }
+  }
 }

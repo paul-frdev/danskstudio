@@ -9,14 +9,20 @@ import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { Button } from '../components';
 import '../styles/index.scss';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 export const LevelsServices = () => {
 
+  const { height, width } = useWindowDimensions();
 
+  const displayHide = width < 530 ? 'hide' : 'show';
 
   return (
     <div className='levels-services'>
-      <MainTitle>УСЛУГИ DANSK STUDIO</MainTitle>
+      {width < 400 ? <MainTitle className='levels-services__title'>УСЛУГИ <br /> DANSK STUDIO</MainTitle>
+        :
+        <MainTitle className='levels-services__title'>УСЛУГИ DANSK STUDIO</MainTitle>
+      }
       <Ptag tag='md' className='levels-services__text'>
         Если вы сомневаетесь в том, какой курс вам подойдет, тогда заполните
         <Link to='/'> АНКЕТУ для определения уровня,</Link>
@@ -32,9 +38,8 @@ export const LevelsServices = () => {
               className='levels-services__cart'
 
             >
-              <img src={lessons} alt="speaking" />
-              <Htag tag='h3'>АВТОРСКИЕ КУРСЫ
-                ПО ПРОИЗНОШЕНИЮ</Htag>
+              <img className={displayHide ? 'hide' : 'show'} src={lessons} alt="speaking" />
+              <Htag tag='h3'>{displayHide ? 'Авторские курсы' : 'Авторские курсы по произведению'}</Htag>
             </CartList>
           </NavLink>
           <NavLink to='lessons' className='link'>
@@ -42,8 +47,8 @@ export const LevelsServices = () => {
               className='levels-services__cart'
 
             >
-              <img src={speaking} alt="lessons" />
-              <Htag tag='h3'>индивидуальные занятия</Htag>
+              <img className={displayHide ? 'hide' : 'show'} src={speaking} alt="lessons" />
+              <Htag tag='h3'>{displayHide ? 'занятия один на один' : 'индивидуальные занятия'}</Htag>
             </CartList>
           </NavLink>
           <NavLink to='groups' className='link'>
@@ -51,7 +56,7 @@ export const LevelsServices = () => {
               className='levels-services__cart'
 
             >
-              <img src={groups} alt="groups" />
+              <img className={displayHide ? 'hide' : 'show'} src={groups} alt="groups" />
               <Htag tag='h3'>занятия в группах</Htag>
             </CartList>
           </NavLink>
@@ -60,14 +65,14 @@ export const LevelsServices = () => {
           <Outlet />
           <div className="levels-services__btns">
             <Button
-            background='yellow'
-            border='sm'
-            borderColor='yellow'
+              background='yellow'
+              border='sm'
+              borderColor='yellow'
             >узнать расписание</Button>
             <Button
-            border='md'
-            borderColor='yellow'
-            boxShadow='yellow'
+              border='md'
+              borderColor='yellow'
+              boxShadow='yellow'
             >выбрать курс и ЗАПИСАТЬСЯ</Button>
           </div>
         </div>
