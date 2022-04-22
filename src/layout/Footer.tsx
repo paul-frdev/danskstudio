@@ -1,7 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react'
 import { Link } from 'react-router-dom';
-import '../styles/index.scss';
-import cn from 'classnames';
 import { ReactComponent as LogoIcon } from '../images/logo.svg';
 import { SiTelegram } from 'react-icons/si';
 import { RiWhatsappFill } from 'react-icons/ri';
@@ -10,6 +8,9 @@ import { BsFacebook } from 'react-icons/bs';
 import { SiMastercard } from 'react-icons/si'
 import { SiVisa } from 'react-icons/si';
 import { FaApplePay } from 'react-icons/fa';
+
+import '../styles/layout/footer.scss';
+import cn from 'classnames';
 
 interface FooterProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 

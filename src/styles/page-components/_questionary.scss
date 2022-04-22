@@ -80,4 +80,20 @@
   .input__wrapper .input__error {
     border: 2px solid var(--bg-red);
   }
+
+  @media screen and(max-width: 510px) {
+    &__title {
+      font-size: 34px;
+      margin: 20px 0;
+    }
+    .input__wrapper:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  @media screen and(max-width: 510px) {
+    &__title {
+      font-size: 26px;
+    }
+  }
 }

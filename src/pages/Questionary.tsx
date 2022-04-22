@@ -5,15 +5,21 @@ import { CartList } from '../components/CartList'
 import { MainTitle } from '../components/MainTitle'
 import { Ptag } from '../components/UI/Ptag'
 import { SubmitHandler, useForm } from 'react-hook-form';
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 export const Questionary = ({ goal, problem, level, study, languages, time, object, homework, file, name, email, phone, checkbox }: IquestionaryForm) => {
 
+  const { height, width } = useWindowDimensions();
   const { register, handleSubmit, formState: { errors } } = useForm<IquestionaryForm>();
   const onSubmit = (data: IquestionaryForm) => console.log(data);
 
   return (
     <section className='questionary'>
-      <MainTitle>Анкета перед началом занятий</MainTitle>
+      {width < 640 ? <MainTitle className='questionary__title'>Анкета <br /> перед началом занятий</MainTitle>
+        :
+        <MainTitle>Анкета перед началом занятий</MainTitle>
+      }
+
       <div className="questionary__container">
         <form className='form' onSubmit={handleSubmit(onSubmit)}>
           <Input

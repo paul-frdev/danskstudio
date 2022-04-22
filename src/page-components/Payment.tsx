@@ -3,11 +3,18 @@ import { CartList } from '../components/CartList'
 import { MainTitle } from '../components/MainTitle'
 import { Htag } from '../components/UI/Htag'
 import { Ptag } from '../components/UI/Ptag'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 export const Payment = () => {
+
+  const { height, width } = useWindowDimensions();
+
   return (
     <section className='payment'>
-      <MainTitle>Условия участия и оплата</MainTitle>
+      {width < 560 ? <MainTitle className='payment__title'>Участие и оплата</MainTitle>
+        :
+        <MainTitle>Условия участия и оплата</MainTitle>
+      }
       <div className="payment__container">
         <CartList className='payment__cart'>
           <Htag tag='h3'>

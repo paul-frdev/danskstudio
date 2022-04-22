@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react';
-import '../styles/index.scss';
+import '../styles/layout/header.scss';
 import cn from 'classnames';
-import { Link, useParams, useRoutes } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../images/logo.svg';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';

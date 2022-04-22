@@ -3,7 +3,7 @@ import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Footer } from './Footer';
 
-import '../styles/index.scss';
+import '../styles/layout/layout.scss';
 
 export const Layout = (): JSX.Element => {
   return (
