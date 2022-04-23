@@ -5,8 +5,12 @@ import { Reviews } from '../components/Reviews'
 import { Services } from '../components/Services'
 import { Step } from '../components/Step'
 import { TopLesson } from '../components/TopLesson'
+import { useScrollY } from '../hooks/useScrollY'
 
 export const MainPage = () => {
+
+    const scrollY = useScrollY()
+    
     return (
         <>
             <TopLesson />

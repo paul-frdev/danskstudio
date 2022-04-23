@@ -8,17 +8,12 @@ import groups from '../images/groups.png';
 import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { MainTitle } from './MainTitle';
-import useWindowDimensions from '../hooks/useWindowDimensions';
 import { useModal } from '../hooks/useModal';
 
 export const Services = () => {
 
-  const {height, width} = useWindowDimensions();
   const {isShown, toggle} = useModal();
 
-  console.log(height);
-  
-  
   return (
     <section className='services'>
       <MainTitle className='services__title' title='after' position='left'>
