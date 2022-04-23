@@ -18,12 +18,40 @@ interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 
   const [isOpened, setIsOpened] = useState(false);
+  const [isShrunk, setShrunk] = useState(false);
   const params = useParams();
+
 
   useEffect(() => {
     setIsOpened(false)
   }, [params])
 
+  useEffect(() => {
+    const handler = () => {
+      setShrunk((isShrunk) => {
+        if (
+          !isShrunk &&
+          (document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20)
+        ) {
+          return true;
+        }
+
+        if (
+          isShrunk &&
+          document.body.scrollTop < 4 &&
+          document.documentElement.scrollTop < 4
+        ) {
+          return false;
+        }
+
+        return isShrunk;
+      });
+    };
+
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
   const variants = {
     opened: {
@@ -40,8 +68,12 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
   }
 
   return (
-    <header className={cn(className, 'header')} {...props}>
-      <div className="header__container">
+    <header className={cn(className, 'header', {
+      'header--fixed': isShrunk
+    })}
+      {...props}
+    >
+      <div className={cn("header__container")}>
         <Link to="/" className={cn('header__logo')}>
           <LogoIcon />
         </Link>
