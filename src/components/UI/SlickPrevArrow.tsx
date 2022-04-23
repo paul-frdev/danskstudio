@@ -5,18 +5,18 @@ import '../../styles/index.scss';
 
 
 interface SlickPrevArrowProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    onClick?: () => void;
+  onClick?: () => void;
 }
 
 export const SlickPrevArrow = ({ className, onClick, ...props }: SlickPrevArrowProps): JSX.Element => {
 
-    return (
-        <div
-            className={cn('button-prev', className)}
-            onClick={onClick}
-            {...props}
-        >
-            <MdOutlineArrowBackIos/>
-        </div>
-    );
+  return (
+    <div
+      className={cn('button-prev', className)}
+      onClick={onClick}
+      {...props}
+    >
+      <MdOutlineArrowBackIos />
+    </div>
+  );
 }
