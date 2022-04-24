@@ -3,6 +3,7 @@ import { CartList } from '../components/CartList'
 import { MainTitle } from '../components/MainTitle'
 import { Htag } from '../components/UI/Htag'
 import { Ptag } from '../components/UI/Ptag'
+import '../styles/page-components/payment.scss'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
 export const Payment = () => {

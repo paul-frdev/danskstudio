@@ -27,12 +27,12 @@ export const Footer = ({ className }: FooterProps): JSX.Element => {
             <LogoIcon />
           </Link>
           <ul className="footer__list">
-            <li className="footer__item"><a href="/" className="footer__link">Услуги</a></li>
-            <li className="footer__item"><a href="/" className="footer__link">О преподавателе</a></li>
-            <li className="footer__item"><a href="/" className="footer__link">Оплата</a></li>
-            <li className="footer__item"><a href="/" className="footer__link">Отзывы</a></li>
-            <li className="footer__item"><a href="/" className="footer__link">Политика конфиденциальности</a></li>
-            <li className="footer__item"><a href="/" className="footer__link">Договор оферты</a></li>
+            <li className="footer__item"><Link to="services" className="footer__link">Услуги</Link></li>
+            <li className="footer__item"><Link to="about" className="footer__link">О преподавателе</Link></li>
+            <li className="footer__item"><Link to="payment" className="footer__link">Оплата</Link></li>
+            <li className="footer__item"><Link to="/" className="footer__link">Отзывы</Link></li>
+            <li className="footer__item"><Link to="/" className="footer__link">Политика конфиденциальности</Link></li>
+            <li className="footer__item"><Link to="/" className="footer__link">Договор оферты</Link></li>
           </ul>
           <div className="footer__contacts">
             <h3>Контакты</h3>

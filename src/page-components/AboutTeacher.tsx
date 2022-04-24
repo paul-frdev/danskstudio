@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { MainTitle } from '../components/MainTitle';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { Ptag } from '../components/UI/Ptag';
 import { CartList } from '../components/CartList'
 import { Htag } from '../components/UI/Htag';
 import aboutMe from '../images/about-bg.jpg';
-import '../styles/index.scss';
+import '../styles/page-components/about-teacher.scss';
 import { Button } from '../components';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 

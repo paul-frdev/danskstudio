@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
 import cn from 'classnames';
-import '../../styles/index.scss';
+import '../../styles/UI/p-tag.scss';
 
 
 export interface PtagProps

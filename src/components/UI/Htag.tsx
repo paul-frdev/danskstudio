@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
-import '../../styles/index.scss';
+import '../../styles/UI/htag.scss';
 import cn from 'classnames';
 
 

@@ -8,7 +8,7 @@ import groups from '../images/groups.png';
 import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { Button } from '../components';
-import '../styles/index.scss';
+import '../styles/page-components/level-services.scss';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 
 export const LevelsServices = () => {

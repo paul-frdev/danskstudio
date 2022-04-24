@@ -46,6 +46,7 @@ export const Step = () => {
               border='sm'
               color='yellow'
               borderColor='yellow'
+              href='questionary'
             >анкета для определения уровня</Button>
           </div>
         </div>

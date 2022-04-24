@@ -15,6 +15,7 @@ export const TopLesson = () => {
           borderColor='yellow'
           boxShadow='yellow'
           className='lesson-left__btn'
+          href='questionary'
           >Записаться на пробный ONLINE урок</Button>
         </div>
         <div className="lesson-right">
