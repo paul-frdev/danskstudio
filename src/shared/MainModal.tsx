@@ -2,19 +2,19 @@ import React, { useEffect } from "react";
 import FocusLock from "react-focus-lock";
 import ReactDOM from "react-dom";
 import '../styles/page-components/main-modal.scss';
-import { ReactComponent as CloseIcon } from '../images/closeIcon.svg';
+// import { ReactComponent as CloseIcon } from '../images/closeIcon.svg';
 
 export interface AppModalProps {
   isShown: boolean;
   hide: () => void;
   appModalContent: JSX.Element;
-  headerText: string;
+  headerText?: string;
 }
 
-export const AppModal: React.FC<AppModalProps> = ({ isShown, hide, appModalContent, headerText }) => {
+export const MainModal: React.FC<AppModalProps> = ({ isShown, hide, appModalContent, headerText }) => {
 
   const onKeyDown = (event: KeyboardEvent) => {
-    if (event.keyCode === 27 && isShown) {
+    if (event.key === "Escape" && isShown) {
       hide();
     }
   };
@@ -42,7 +42,7 @@ export const AppModal: React.FC<AppModalProps> = ({ isShown, hide, appModalConte
               <div className="app-modal__header">
                 <h2>{headerText}</h2>
                 <button className='app-modal__close' onClick={hide}>
-                  <CloseIcon />
+                  &times;
                 </button>
               </div>
               {appModalContent}

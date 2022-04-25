@@ -8,8 +8,6 @@ import { TopLesson } from '../components/TopLesson'
 
 export const MainPage = () => {
 
-
-
   return (
     <>
       <TopLesson />

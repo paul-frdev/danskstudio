@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.scss';
 import { CartList } from './CartList';
@@ -9,16 +9,22 @@ import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { MainTitle } from './MainTitle';
 import { useModal } from '../hooks/useModal';
+import { useScrollY } from '../hooks/useScrollY';
+import { MainModal } from '../shared/MainModal';
+import { FillFormModal } from '../modals/FillFormModal';
 
 export const Services = () => {
 
-  const {isShown, toggle} = useModal();
+  const { isShown, toggle } = useModal();
+  const scrollY = useScrollY()
+
+  console.log(scrollY);
 
   return (
     <section className='services'>
       <MainTitle className='services__title' title='after' position='left'>
         <span> Какие услуги
-          <br/>
+          <br />
           предлагает студия</span>
       </MainTitle>
       <div className="services__container">
@@ -46,6 +52,18 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
+      <MainModal 
+      isShown={isShown}
+      hide={toggle}
+      headerText='choose one of the students'
+      appModalContent={
+          <FillFormModal
+             to='questionary'
+          />
+      }
+      />
     </section>
   )
 }
+
+
