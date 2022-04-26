@@ -6,6 +6,7 @@ import { MainTitle } from '../components/MainTitle'
 import { Ptag } from '../components/UI/Ptag'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import useWindowDimensions from '../hooks/useWindowDimensions'
+import '../styles/page-components/questionary.scss';
 
 export const Questionary = ({ goal, problem, level, study, languages, time, object, homework, file, name, email, phone, checkbox }: IquestionaryForm) => {
 

@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
-import '../styles/index.scss';
+import '../styles/components/cart-list.scss';
 import cn from 'classnames';
 
 interface CartListProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

@@ -7,6 +7,8 @@ import reviewFour from '../images/mainSlider/reviewfour.jpg';
 import UISlider from './UISlider';
 import { MainTitle } from './MainTitle';
 
+import '../styles/components/reviews.scss';
+
 
 export const Reviews = () => {
   return (

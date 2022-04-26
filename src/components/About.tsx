@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/index.scss';
+import '../styles/components/about.scss';
 import about from '../images/about.png';
 import { CartList } from './CartList';
 import { Htag } from './UI/Htag';

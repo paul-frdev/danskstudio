@@ -2,7 +2,7 @@ import React, { DetailedHTMLProps, HTMLAttributes } from 'react'
 import { NavLink } from 'react-router-dom'
 import { INavMenu } from '../common/menu.interface';
 import cn from 'classnames';
-import '../styles/index.scss';
+import '../styles/components/nav-menu.scss';
 
 interface NavMenuProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/index.scss';
+import '../styles/components/services.scss';
 import { CartList } from './CartList';
 import { Htag } from './UI/Htag';
 import { Tag } from './UI/Tag';

@@ -1,8 +1,9 @@
-import React from 'react'
-import { CartList } from './CartList'
-import { Htag } from './UI/Htag'
-import { Ptag } from './UI/Ptag'
-import { Tag } from './UI/Tag'
+import React from 'react';
+import { CartList } from './CartList';
+import { Htag } from './UI/Htag';
+import { Ptag } from './UI/Ptag';
+import { Tag } from './UI/Tag';
+import '../styles/components/groups.scss';
 
 export const Groups = () => {
   return (

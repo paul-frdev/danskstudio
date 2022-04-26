@@ -4,6 +4,7 @@ import { Button } from './UI/Button';
 import { Ptag } from './UI/Ptag';
 import { Tag } from './UI/Tag';
 import stepImg from '../images/step.jpg';
+import '../styles/components/step.scss';
 
 export const Step = () => {
   return (

@@ -3,9 +3,11 @@ import { useState } from "react";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cn from 'classnames';
 import { SlickNextArrow } from './UI/SlickNextArrow';
 import { SlickPrevArrow } from './UI/SlickPrevArrow';
+
+import '../styles/components/ui-slider.scss';
+import cn from 'classnames';
 
 interface UISliderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   children: ReactNode

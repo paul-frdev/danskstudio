@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
-import '../styles/index.scss';
+import '../styles/components/main-title.scss';
 import cn from 'classnames';
 
 interface MainTitleProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

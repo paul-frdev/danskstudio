@@ -5,6 +5,7 @@ import { Button } from './UI/Button';
 import { Input } from './UI/Input';
 import { Ptag } from './UI/Ptag'
 import { Tag } from './UI/Tag';
+import '../styles/components/main-form.scss';
 
 
 interface IFormInput {

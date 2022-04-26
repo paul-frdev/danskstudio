@@ -1,7 +1,9 @@
-import React from 'react'
-import { CartList } from './CartList'
-import { Htag } from './UI/Htag'
-import { Ptag } from './UI/Ptag'
+import React from 'react';
+import { CartList } from './CartList';
+import { Htag } from './UI/Htag';
+import { Ptag } from './UI/Ptag';
+
+import '../styles/components/lessons.scss';
 
 export const Lessons = () => {
   return (

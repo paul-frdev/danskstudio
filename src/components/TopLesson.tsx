@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/index.scss';
+import '../styles/components/top-lesson.scss';
 import { Button } from './UI/Button';
 import topLesson from '../images/top-lesson.png'
 
