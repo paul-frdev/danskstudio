@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/services.scss';
 import { CartList } from './CartList';
@@ -9,19 +9,22 @@ import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { MainTitle } from './MainTitle';
 import { useModal } from '../hooks/useModal';
-import { useScrollY } from '../hooks/useScrollY';
 import { MainModal } from '../shared/MainModal';
 import { FillFormModal } from '../modals/FillFormModal';
 
 export const Services = () => {
 
   const { isShown, toggle } = useModal();
-  const scrollY = useScrollY()
+  const [heightCoordinates, setHeightCoordinates] = useState(0)
 
-  console.log(scrollY);
+  const servicesId = document.querySelector('#services');
+
+  const getServicesCoords = servicesId?.getBoundingClientRect();
+  console.log(getServicesCoords);
+
 
   return (
-    <section className='services'>
+    <section className='services' id='services'>
       <MainTitle className='services__title' title='after' position='left'>
         <span> Какие услуги
           <br />
@@ -52,15 +55,15 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
-      <MainModal 
-      isShown={isShown}
-      hide={toggle}
-      headerText='choose one of the students'
-      appModalContent={
+      <MainModal
+        isShown={isShown}
+        hide={toggle}
+        headerText='choose one of the students'
+        appModalContent={
           <FillFormModal
-             to='questionary'
+            to='questionary'
           />
-      }
+        }
       />
     </section>
   )
