@@ -4,6 +4,7 @@ import { Htag } from './UI/Htag';
 import { Ptag } from './UI/Ptag';
 
 import '../styles/components/speaking.scss';
+import { Button } from './UI/Button';
 
 export const Speaking = () => {
   return (
@@ -39,6 +40,18 @@ export const Speaking = () => {
           <Ptag tag='md'>Подойдёт тем, кто очень занят или работает по вечерам/выходным и сложно найти время на
             занятия в группе.</Ptag>
         </CartList>
+        <div className="speaking__btns">
+          <Button
+            background='yellow'
+            border='sm'
+            borderColor='yellow'
+          >узнать расписание</Button>
+          <Button
+            border='md'
+            borderColor='yellow'
+            boxShadow='yellow'
+          >выбрать курс и ЗАПИСАТЬСЯ</Button>
+        </div>
       </div>
     </section>
   )

@@ -63,18 +63,6 @@ export const LevelsServices = () => {
         </div>
         <div>
           <Outlet />
-          <div className="levels-services__btns">
-            <Button
-              background='yellow'
-              border='sm'
-              borderColor='yellow'
-            >узнать расписание</Button>
-            <Button
-              border='md'
-              borderColor='yellow'
-              boxShadow='yellow'
-            >выбрать курс и ЗАПИСАТЬСЯ</Button>
-          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { Htag } from './UI/Htag';
 import { Ptag } from './UI/Ptag';
 
 import '../styles/components/lessons.scss';
+import { Button } from './UI/Button';
 
 export const Lessons = () => {
   return (
@@ -24,6 +25,18 @@ export const Lessons = () => {
           </Ptag>
           <Ptag tag='md'>В выходные дни 9.00-12.00 - 800 крон за 1 занятие</Ptag>
         </CartList>
+        <div className="lessons__btns">
+          <Button
+            background='yellow'
+            border='sm'
+            borderColor='yellow'
+          >узнать расписание</Button>
+          <Button
+            border='md'
+            borderColor='yellow'
+            boxShadow='yellow'
+          >выбрать курс и ЗАПИСАТЬСЯ</Button>
+        </div>
       </div>
     </section>
   )

@@ -4,6 +4,7 @@ import { Htag } from './UI/Htag';
 import { Ptag } from './UI/Ptag';
 import { Tag } from './UI/Tag';
 import '../styles/components/groups.scss';
+import { Button } from './UI/Button';
 
 export const Groups = () => {
   return (
@@ -94,6 +95,18 @@ export const Groups = () => {
             </span>
           </Tag>
         </CartList>
+        <div className="groups__btns">
+          <Button
+            background='yellow'
+            border='sm'
+            borderColor='yellow'
+          >узнать расписание</Button>
+          <Button
+            border='md'
+            borderColor='yellow'
+            boxShadow='yellow'
+          >выбрать курс и ЗАПИСАТЬСЯ</Button>
+        </div>
       </div>
     </section>
   )
