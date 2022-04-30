@@ -6,6 +6,26 @@
     color: var(--color-black-light);
     transition: color 0.2s ease-out;
 
+    padding: 0 0 10px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      transition: width 0.5s ease;
+      height: 2px;
+      background-color: #c90c31;;
+    }
+
+    &.active::after,
+    &:hover::after {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 31px;
     }

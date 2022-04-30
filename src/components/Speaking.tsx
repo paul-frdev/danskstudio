@@ -5,8 +5,14 @@ import { Ptag } from './UI/Ptag';
 
 import '../styles/components/speaking.scss';
 import { Button } from './UI/Button';
+import { useModal } from '../hooks/useModal';
+import { MainModal } from '../shared/MainModal';
+import { AuthorCourseModal } from '../modals/AuthorCourseModal';
 
 export const Speaking = () => {
+  const { isShown, toggle } = useModal()
+  const onSubmit = () => toggle();
+
   return (
     <section className='speaking'>
       <div className="speaking__container">
@@ -50,7 +56,17 @@ export const Speaking = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
+            onClick={toggle}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
+          <MainModal
+            isShown={isShown}
+            hide={toggle}
+            appModalContent={
+              <AuthorCourseModal 
+              onSubmit={onSubmit}
+              />
+            }
+          />
         </div>
       </div>
     </section>

@@ -34,14 +34,14 @@ export const MainModal: React.FC<AppModalProps> = ({ isShown, hide, appModalCont
 
   const appModal = (
     <>
-      <div className='app-modal'>
-        <div className="app-modal__wrapper">
+      <div className='main-modal'>
+        <div className="main-modal__wrapper">
           <a href="#"></a>
           <FocusLock>
-            <div className="app-modal__content">
-              <div className="app-modal__header">
+            <div className="main-modal__content">
+              <div className="main-modal__header">
                 <h2>{headerText}</h2>
-                <button className='app-modal__close' onClick={hide}>
+                <button className='main-modal__close' onClick={hide}>
                   &times;
                 </button>
               </div>
