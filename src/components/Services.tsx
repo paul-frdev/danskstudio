@@ -11,6 +11,7 @@ import { MainTitle } from './MainTitle';
 import { useModal } from '../hooks/useModal';
 import { MainModal } from '../shared/MainModal';
 import { FillFormModal } from '../modals/FillFormModal';
+import { Button } from './UI/Button';
 
 export const Services = () => {
 
@@ -35,7 +36,7 @@ export const Services = () => {
           <CartList className='services__cart' border='border-sm'>
             <Htag className='h3' tag='h3'>Авторские курсы по произношнию</Htag>
             <img src={speaking} alt="speaking" />
-            <Link className='services__link' to='services/speaking'>Подробнее</Link>
+            <Button className='services__link' href='services/speaking'>Подробнее</Button>
           </CartList >
           <CartList className='services__cart' border='border-sm'>
             <div>
@@ -43,7 +44,7 @@ export const Services = () => {
               <Tag className='services__text' size='md'>произношение, подготовка к экзаменам, датский для начинающих и ваши индивидуальные языковые потребности</Tag>
             </div>
             <img src={lessons} alt="lessons" />
-            <Link className='services__link' to='services/lessons'>Подробнее</Link>
+            <Button className='services__link' href='services/lessons'>Подробнее</Button>
           </CartList>
           <CartList className='services__cart' border='border-sm'>
             <div className='services-block'>
@@ -51,7 +52,7 @@ export const Services = () => {
               <Tag className='services__text' size='md'>датский с нуля, разговорный клуб, постановка произношения</Tag>
             </div>
             <img src={groups} alt="groups" />
-            <Link className='services__link' to='services/groups'>Подробнее</Link>
+            <Button className='services__link' href='services/groups'>Подробнее</Button>
           </CartList>
         </div>
       </div>

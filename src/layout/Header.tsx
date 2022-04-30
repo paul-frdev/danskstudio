@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes, useEffect, useRef, useState } from 'react';
 import '../styles/layout/header.scss';
 import cn from 'classnames';
 import { Link, useParams } from 'react-router-dom';
@@ -18,40 +18,12 @@ interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 
   const [isOpened, setIsOpened] = useState(false);
-  const [isShrunk, setShrunk] = useState(false);
   const params = useParams();
 
 
   useEffect(() => {
     setIsOpened(false)
   }, [params])
-
-  useEffect(() => {
-    const handler = () => {
-      setShrunk((isShrunk) => {
-        if (
-          !isShrunk &&
-          (document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20)
-        ) {
-          return true;
-        }
-
-        if (
-          isShrunk &&
-          document.body.scrollTop < 4 &&
-          document.documentElement.scrollTop < 4
-        ) {
-          return false;
-        }
-
-        return isShrunk;
-      });
-    };
-
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
 
   const variants = {
     opened: {
@@ -66,11 +38,23 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
       x: '160%',
     }
   }
+  const headerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const shrinkHeader = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        headerRef.current!.classList.add('shrink');
+      } else {
+        headerRef.current!.classList.remove('shrink');
+      }
+    }
+    window.addEventListener('scroll', shrinkHeader);
+    return () => {
+      window.removeEventListener('scroll', shrinkHeader);
+    };
+  }, []);
 
   return (
-    <header className={cn(className, 'header', {
-      'header--fixed': isShrunk
-    })}
+    <header ref={headerRef} className={cn(className, 'header')}
       {...props}
     >
       <div className={cn("header__container")}>
