@@ -14,12 +14,13 @@
     max-width: 834px;
     border: 1px solid #333333;
     border-radius: 10px;
-    height: 80px;
+    height: 60px;
     margin-bottom: 30px;
   }
 
   p {
     max-width: 830px;
+    margin: 0 auto;
   }
 
   &__btn {
@@ -28,7 +29,7 @@
     margin-top: 30px;
 
     button {
-      width: 130px;
+      width: 170px;
       height: 52px;
       text-transform: uppercase;
     }
@@ -41,5 +42,50 @@
     border-radius: inherit;
     border-style: inherit;
     border-width: inherit;
+  }
+
+  .css-319lph-ValueContainer {
+    height: 100%;
+  }
+
+  .css-qc6sy-singleValue {
+    height: inherit;
+    white-space: pre-wrap;
+    padding: 9px 0 0 0;
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    background-color: inherit;
+  }
+
+  .css-tlfecz-indicatorContainer {
+    svg {
+      color: var(--color-black);
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .css-6j8wv5-Input {
+    display: none;
+  }
+
+  .css-1pahdxg-control {
+    height: 100%;
+    border-color: var(--bg-black);
+    &:hover {
+      border-radius: inherit;
+      box-shadow: none;
+      border-color: var(--bg-black);
+    }
+  }
+
+  .css-26l3qy-menu {
+    .css-4ljt47-MenuList {
+      .css-yt9ioa-option {
+        color: var(--color-black);
+      }
+    }
   }
 }

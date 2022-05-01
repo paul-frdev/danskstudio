@@ -46,15 +46,19 @@
   }
   &__close {
     position: absolute;
-    top: 4px;
-    right: 6px;
+    top: 25px;
+    right: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: #ffb6aa;
+    background-color: inherit;
     width: 22px;
     height: 22px;
     cursor: pointer;
+
+    svg {
+      fill: var(--bg-yellow);
+    }
   }
 }
