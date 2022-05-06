@@ -1,37 +1,33 @@
 import React, { useState } from 'react';
-import Select from 'react-select';
-import { Button, Ptag } from '../components';
+import { Button } from '../components';
 import '../styles/modals/author-course.scss';
-
+import cn from 'classnames';
+import { AppSelect } from '../components/UI/AppSelect';
 
 interface AuthorCourseModalProps {
-  onSubmit: () => void;
+  onClick?: () => void
 }
-export const AuthorCourseModal = ({ onSubmit }: AuthorCourseModalProps) => {
-  const [selectedOption, setSelectedOption] = useState<string | unknown>(null);
+
+export const AuthorCourseModal = ({ onClick }: AuthorCourseModalProps): JSX.Element => {
+
+  const [selectedOption, setIsSelectedOption] = useState(null);
 
   const options = [
-    { value: `Авторский курс по произношению "Основы произношения датского языка. Постановка основных звуков"`, label: 'Авторский курс по произношению "Основы произношения датского языка. Постановка основных звуков' },
     {
-      value: `Авторский курс по произношению “Нюансы произношения датского языка. Фокус на
-    гласные”`, label: `Авторский курс по произношению “Нюансы произношения датского языка. Фокус на
-    гласные”`
+     id: 1, value: 'Авторский курс по произношению Основы произношения датского языка. Постановка основных звуков', label: 'ssss'
     },
-    { value: `Авторский курс по произношению “Мелодия и интонация датского языка. Вишенка на торте.”`, label: `Авторский курс по произношению “Мелодия и интонация датского языка. Вишенка на торте.”` },
-  ];
+    {
+      id: 2, value: 'Авторский курс по произношению Основы произношения датского языка. Постановка основных звуков', label: 'aaaa'
+    },
+    {
+      id: 3, value: 'Авторский курс по произношению Мелодия и интонация датского языка. Вишенка на торте', label: 'dddd'
+    }
+  ]
   return (
     <div className='author-course'>
-      <Select
-        className='author-course__select'
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        options={options}
+      <AppSelect 
+      optionItems={options}
       />
-      <Ptag tag='md'>
-        Продолжительность: 5 недель, 2 урока в неделю.
-        <br />
-        Cтоимость: 2000 крон
-      </Ptag>
       <div className="author-course__btn">
         <Button
           border='md'
@@ -42,3 +38,4 @@ export const AuthorCourseModal = ({ onSubmit }: AuthorCourseModalProps) => {
     </div>
   )
 }
+

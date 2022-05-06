@@ -11,7 +11,7 @@ import { AuthorCourseModal } from '../modals/AuthorCourseModal';
 
 export const Speaking = () => {
   const { isShown, toggle } = useModal()
-  const onSubmit = () => toggle();
+  const onclick = () => toggle();
 
   return (
     <section className='speaking'>
@@ -63,7 +63,6 @@ export const Speaking = () => {
             hide={toggle}
             appModalContent={
               <AuthorCourseModal 
-              onSubmit={onSubmit}
               />
             }
           />
