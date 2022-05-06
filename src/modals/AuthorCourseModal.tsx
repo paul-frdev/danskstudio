@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../components';
+import { Button, Ptag } from '../components';
 import '../styles/modals/author-course.scss';
 import cn from 'classnames';
 import { AppSelect } from '../components/UI/AppSelect';
@@ -10,31 +10,26 @@ interface AuthorCourseModalProps {
 
 export const AuthorCourseModal = ({ onClick }: AuthorCourseModalProps): JSX.Element => {
 
-  const [selectedOption, setIsSelectedOption] = useState(null);
+  const [selectedOption, setIsSelectedOption] = useState('');
 
   const options = [
     {
-     id: 1, value: 'Авторский курс по произношению Основы произношения датского языка. Постановка основных звуков', label: 'ssss'
+      id: 1, value: 'Авторский курс по произношению Основы произношения датского языка. Постановка основных звуков', label: 'Продолжительность: 5 недель, 2 урока в неделю.Cтоимость: 2000 крон'
     },
     {
-      id: 2, value: 'Авторский курс по произношению Основы произношения датского языка. Постановка основных звуков', label: 'aaaa'
+      id: 2, value: 'Авторский курс по произношению Основы произношения датского языка. Постановка основных звуков', label: 'Продолжительность: 9 недель, 3 урока в неделю.Cтоимость: 5000 крон'
     },
     {
-      id: 3, value: 'Авторский курс по произношению Мелодия и интонация датского языка. Вишенка на торте', label: 'dddd'
+      id: 3, value: 'Авторский курс по произношению Мелодия и интонация датского языка. Вишенка на торте', label: 'Продолжительность: 6 недель, 2 урока в неделю.Cтоимость: 3000 крон'
     }
   ]
+
   return (
-    <div className='author-course'>
-      <AppSelect 
-      optionItems={options}
+    <div  className='author-course'>
+      <AppSelect
+        optionItems={options}
+        onFocus={(value: string) => setIsSelectedOption(value)}
       />
-      <div className="author-course__btn">
-        <Button
-          border='md'
-          borderColor='yellow'
-          boxShadow='yellow'
-        >Оплатить</Button>
-      </div>
     </div>
   )
 }

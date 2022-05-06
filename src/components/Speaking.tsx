@@ -41,8 +41,7 @@ export const Speaking = () => {
           <Ptag tag='md'>Bидео-урок длитcя 10-20 минут.</Ptag>
           <Ptag tag='md'>Bремя, которое потребуется на выполнение домашнего задания: 30-40 минут</Ptag>
           <Ptag tag='md'>Продолжительность: 5 недель, 2 урока в неделю.</Ptag>
-          <Ptag tag='md'><span>Cтоимость: 2000 крон
-          </span></Ptag>
+          <Ptag tag='md'><span>Cтоимость: 2000 крон</span></Ptag>
           <Ptag tag='md'>Подойдёт тем, кто очень занят или работает по вечерам/выходным и сложно найти время на
             занятия в группе.</Ptag>
         </CartList>
@@ -56,7 +55,7 @@ export const Speaking = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
-            onClick={toggle}
+            onClick={onclick}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
           <MainModal
             isShown={isShown}
