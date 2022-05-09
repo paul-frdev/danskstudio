@@ -1,4 +1,4 @@
-.author-course {
+.courses-modals {
   padding: 70px 60px;
   margin: 0 auto;
   max-width: 1084px;
@@ -8,16 +8,6 @@
   box-sizing: border-box;
   border-radius: 20px;
   background-color: var(--bg-light);
-
-  &__select {
-    cursor: pointer;
-    margin: 0 auto;
-    max-width: 834px;
-    border: none;
-    border-radius: 10px;
-    height: 60px;
-    margin-bottom: 30px;
-  }
 
   p {
     max-width: 830px;
@@ -34,12 +24,5 @@
       height: 52px;
       text-transform: uppercase;
     }
-  }
-  .css-16eg53-control {
-    box-shadow: none;
-  }
-
-  .css-16eg53-control:hover {
-    border-color: var(--bg-yellow);
   }
 }

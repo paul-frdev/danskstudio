@@ -5,8 +5,16 @@ import { Ptag } from './UI/Ptag';
 
 import '../styles/components/lessons.scss';
 import { Button } from './UI/Button';
+import { SpecialCourseModal } from '../modals/SpecialCourseModal';
+import { useModal } from '../hooks/useModal';
+import { MainModal } from '../shared/MainModal';
 
 export const Lessons = () => {
+  const { isShown, toggle } = useModal()
+  const onclick = () => toggle();
+
+  
+
   return (
     <section className='lessons'>
       <div className="lessons__container">
@@ -35,7 +43,15 @@ export const Lessons = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
+            onClick={onclick}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
+          <MainModal
+            isShown={isShown}
+            hide={toggle}
+            appModalContent={
+              <SpecialCourseModal />
+            }
+          />
         </div>
       </div>
     </section>

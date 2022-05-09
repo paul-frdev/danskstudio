@@ -5,8 +5,16 @@ import { Ptag } from './UI/Ptag';
 import { Tag } from './UI/Tag';
 import '../styles/components/groups.scss';
 import { Button } from './UI/Button';
+import { useModal } from '../hooks/useModal';
+import { MainModal } from '../shared/MainModal';
+import { GroupsCourseModal } from '../modals/GroupsCourseModal';
+
 
 export const Groups = () => {
+
+  const { isShown, toggle } = useModal()
+  const onclick = () => toggle();
+
   return (
     <section className='groups'>
       <div className="groups__container">
@@ -88,7 +96,7 @@ export const Groups = () => {
           </Ptag>
 
           <Tag size='xl'>
-          Стоимость: 500 крон в месяц + материалы
+            Стоимость: 500 крон в месяц + материалы
             <span> (около 50 крон - месячный абонемент на платформу, где
               можно просматривать фильмы на датском языке
               легально.)
@@ -105,7 +113,15 @@ export const Groups = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
+            onClick={onclick}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
+          <MainModal
+            isShown={isShown}
+            hide={toggle}
+            appModalContent={
+              <GroupsCourseModal />
+            }
+          />
         </div>
       </div>
     </section>
