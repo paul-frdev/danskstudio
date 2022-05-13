@@ -7,7 +7,7 @@ import '../styles/components/lessons.scss';
 import { Button } from './UI/Button';
 import { SpecialCourseModal } from '../modals/SpecialCourseModal';
 import { useModal } from '../hooks/useModal';
-import { MainModal } from '../shared/MainModal';
+import { AppModal } from '../shared/AppModal';
 
 export const Lessons = () => {
   const { isShown, toggle } = useModal()
@@ -45,7 +45,7 @@ export const Lessons = () => {
             boxShadow='yellow'
             onClick={onclick}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
-          <MainModal
+          <AppModal
             isShown={isShown}
             hide={toggle}
             appModalContent={

@@ -25,4 +25,14 @@
       text-transform: uppercase;
     }
   }
+
+  .courses-modals {
+    &__text {
+      font-weight: 700;
+      font-size: 18px;
+      &--pt {
+        padding-top: 20px;
+      }
+    }
+  }
 }

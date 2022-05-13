@@ -19,7 +19,7 @@ export const MainRoutes = () => {
       <Route path='/' element={<Layout />}>
         <Route index element={<MainPage />} />
         <Route path='about' element={<AboutPage />} />
-        <Route path='services' element={<ServicesPage />}>
+        <Route path='services/*' element={<ServicesPage />}>
           <Route path='lessons' element={<Lessons />} />
           <Route path='speaking' element={<Speaking />} />
           <Route path='groups' element={<Groups />} />

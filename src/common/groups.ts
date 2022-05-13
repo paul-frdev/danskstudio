@@ -31,3 +31,22 @@ export const groupsTime = [
     value: "В выходные дни 9.00-12.00",
   },
 ];
+
+export const groupsPrice = [
+  {
+    id: 1,
+    value: 1000,
+  },
+  {
+    id: 2,
+    value: 3000,
+  },
+  {
+    id: 3,
+    value: 1000,
+  },
+  {
+    id: 4,
+    value: 500,
+  }
+];

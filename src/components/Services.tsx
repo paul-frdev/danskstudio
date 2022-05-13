@@ -9,7 +9,7 @@ import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { MainTitle } from './MainTitle';
 import { useModal } from '../hooks/useModal';
-import { MainModal } from '../shared/MainModal';
+import { AppModal } from '../shared/AppModal';
 import { FillFormModal } from '../modals/FillFormModal';
 import { Button } from './UI/Button';
 
@@ -56,7 +56,7 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
-      <MainModal
+      <AppModal
         isShown={isShown}
         hide={toggle}
         headerText='choose one of the students'

@@ -6,7 +6,7 @@ import { Ptag } from './UI/Ptag';
 import '../styles/components/speaking.scss';
 import { Button } from './UI/Button';
 import { useModal } from '../hooks/useModal';
-import { MainModal } from '../shared/MainModal';
+import { AppModal } from '../shared/AppModal';
 import { AuthorCourseModal } from '../modals/AuthorCourseModal';
 
 export const Speaking = () => {
@@ -57,7 +57,7 @@ export const Speaking = () => {
             boxShadow='yellow'
             onClick={onclick}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
-          <MainModal
+          <AppModal
             isShown={isShown}
             hide={toggle}
             appModalContent={
