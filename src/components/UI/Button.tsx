@@ -20,6 +20,7 @@ interface ButtonProps extends
 export const Button = ({ href, arrow = 'none', border = 'none', background = 'none', borderColor = 'none', boxShadow = 'none', className, children, ...props }: ButtonProps) => {
   return (
     <motion.button
+      initial={false}
       whileHover={{ scale: 1.05 }}
       className={cn('button', className, {
         'button__color--red': borderColor === 'red',

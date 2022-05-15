@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CartList } from './CartList';
 import { Htag } from './UI/Htag';
 import { Ptag } from './UI/Ptag';
@@ -6,14 +6,11 @@ import { Ptag } from './UI/Ptag';
 import '../styles/components/lessons.scss';
 import { Button } from './UI/Button';
 import { SpecialCourseModal } from '../modals/SpecialCourseModal';
-import { useModal } from '../hooks/useModal';
-import { AppModal } from '../shared/AppModal';
 
 export const Lessons = () => {
-  const { isShown, toggle } = useModal()
-  const onclick = () => toggle();
-
   
+  const [show, setShow] = useState(false);
+  const toggleShow = () => setShow(prev => !prev);
 
   return (
     <section className='lessons'>
@@ -43,15 +40,9 @@ export const Lessons = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
-            onClick={onclick}
+            onClick={toggleShow}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
-          <AppModal
-            isShown={isShown}
-            hide={toggle}
-            appModalContent={
-              <SpecialCourseModal />
-            }
-          />
+            <SpecialCourseModal show={show} toggleShow={toggleShow}/>
         </div>
       </div>
     </section>

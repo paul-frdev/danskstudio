@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CartList } from './CartList';
 import { Htag } from './UI/Htag';
 import { Ptag } from './UI/Ptag';
 
 import '../styles/components/speaking.scss';
 import { Button } from './UI/Button';
-import { useModal } from '../hooks/useModal';
-import { AppModal } from '../shared/AppModal';
 import { AuthorCourseModal } from '../modals/AuthorCourseModal';
 
 export const Speaking = () => {
-  const { isShown, toggle } = useModal()
-  const onclick = () => toggle();
 
+  const [show, setShow] = useState(false);
+  const toggleShow = () => setShow(prev => !prev);
+  
   return (
     <section className='speaking'>
       <div className="speaking__container">
@@ -55,16 +54,9 @@ export const Speaking = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
-            onClick={onclick}
+            onClick={toggleShow}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
-          <AppModal
-            isShown={isShown}
-            hide={toggle}
-            appModalContent={
-              <AuthorCourseModal 
-              />
-            }
-          />
+            <AuthorCourseModal show={show} toggleShow={toggleShow}/>
         </div>
       </div>
     </section>

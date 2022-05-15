@@ -8,14 +8,11 @@ import groups from '../images/groups.png';
 import lessons from '../images/lessons.png';
 import speaking from '../images/speaking.png';
 import { MainTitle } from './MainTitle';
-import { useModal } from '../hooks/useModal';
-import { AppModal } from '../shared/AppModal';
 import { FillFormModal } from '../modals/FillFormModal';
 import { Button } from './UI/Button';
 
 export const Services = () => {
 
-  const { isShown, toggle } = useModal();
   const [heightCoordinates, setHeightCoordinates] = useState(0)
 
   const servicesId = document.querySelector('#services');
@@ -56,16 +53,7 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
-      <AppModal
-        isShown={isShown}
-        hide={toggle}
-        headerText='choose one of the students'
-        appModalContent={
-          <FillFormModal
-            to='questionary'
-          />
-        }
-      />
+        <FillFormModal to='questionary'/>
     </section>
   )
 }

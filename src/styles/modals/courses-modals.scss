@@ -1,33 +1,24 @@
-.courses-modals {
-  padding: 70px 60px;
-  margin: 0 auto;
-  max-width: 1084px;
-  max-height: 704px;
-  width: 100%;
-  border: 4px solid #f4e8da;
-  box-sizing: border-box;
-  border-radius: 20px;
-  background-color: var(--bg-light);
-
-  p {
-    max-width: 830px;
-    margin: 0 auto;
+.modals {
+  &__wrapper {
+    margin-top: 57px;
   }
 
-  &__btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-
-    button {
-      width: 170px;
-      height: 52px;
-      text-transform: uppercase;
-    }
+  button {
+    width: 170px;
+    height: 52px;
+    text-transform: uppercase;
   }
 
-  .courses-modals {
+  button:disabled {
+    border: 2px solid;
+    box-shadow: none;
+    cursor: wait;
+  }
+
+  .modals {
     &__text {
+      max-width: 830px;
+      margin-right: auto;
       font-weight: 700;
       font-size: 18px;
       &--pt {

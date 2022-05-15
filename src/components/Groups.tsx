@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CartList } from './CartList';
 import { Htag } from './UI/Htag';
 import { Ptag } from './UI/Ptag';
 import { Tag } from './UI/Tag';
 import '../styles/components/groups.scss';
 import { Button } from './UI/Button';
-import { useModal } from '../hooks/useModal';
-import { AppModal } from '../shared/AppModal';
 import { GroupsCourseModal } from '../modals/GroupsCourseModal';
 
 
 export const Groups = () => {
 
-  const { isShown, toggle } = useModal()
-  const onclick = () => {
-    toggle()
-  };
-
+  const [show, setShow] = useState(false);
+  const toggleShow = () => setShow(prev => !prev);
 
   return (
     <section className='groups'>
@@ -116,16 +111,9 @@ export const Groups = () => {
             border='md'
             borderColor='yellow'
             boxShadow='yellow'
-            onClick={onclick}
+            onClick={toggleShow}
           >выбрать курс и ЗАПИСАТЬСЯ</Button>
-
-          <AppModal
-            isShown={isShown}
-            hide={toggle}
-            appModalContent={
-              <GroupsCourseModal />
-            }
-          />
+            <GroupsCourseModal show={show} toggleShow={toggleShow}/>
         </div>
       </div>
     </section>
