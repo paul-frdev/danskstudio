@@ -20,7 +20,7 @@ export const SpecialCourseModal = ({ show, toggleShow }: SpecialCourseModalProps
   const [values, setValues] = React.useState({ groupName: '', time: '', price: '' });
 
   console.log(values);
-  
+
   return (
     <>
       <Dialog
@@ -74,11 +74,11 @@ export const SpecialCourseModal = ({ show, toggleShow }: SpecialCourseModalProps
               </Select>
               <Ptag tag='md' className='modals__text modals__text--pt' style={{ paddingTop: '30px' }}>Продолжительность: 5 недель, 2 урока в неделю.</Ptag>
               <div className='modals__text'>
-                Стоимость: {values.time === '' && <span style={{ color: 'red', fontWeight: '700' }}>Выберете время</span>}
+                Стоимость: <span style={{ color: 'red', fontWeight: '700' }}>{values.groupName === '' ? 'Выберете курс' : values.time === '' ? 'Выберете время' : ''}</span>
                 <>
                   {values.time !== '' &&
                     optionsTimeSpecialGroupPrice.map(price => Number(values.time) === price.id &&
-                      <span key={price.id} onChange={(event: any) => setValues({...values, price: price.value})}>
+                      <span key={price.id} onChange={(event: any) => setValues({ ...values, price: price.value })}>
                         {price.value} крон/ в месяц
                       </span>)
                   }

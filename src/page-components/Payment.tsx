@@ -11,7 +11,7 @@ export const Payment = () => {
   const { height, width } = useWindowDimensions();
 
   return (
-    <section className='payment'>
+    <section className='payment' id='payment'>
       {width < 560 ? <MainTitle className='payment__title'>Участие и оплата</MainTitle>
         :
         <MainTitle>Условия участия и оплата</MainTitle>

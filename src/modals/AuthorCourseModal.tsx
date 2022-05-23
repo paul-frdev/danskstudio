@@ -61,7 +61,11 @@ export const AuthorCourseModal = ({ show, toggleShow }: AuthorCourseModalProps):
               Продолжительность: 5 недель, 2 урока в неделю.
             </Ptag>
             <Ptag tag='md' className='modals__text'>
-              Стоимость: {values.groupName === '' && <span style={{ color: 'red', fontWeight: '700' }}>Выберете курс</span>}
+              Стоимость:
+              {values.groupName === '' && <span style={{ color: 'red', fontWeight: '700' }}>Выберете курс</span>
+
+              }
+
               {values.groupName !== '' &&
                 optionsAuthorPrice.map(price => Number(values.groupName) === price.id && <span key={price.id}>{price.label} крон/ в месяц</span>)
               }

@@ -74,7 +74,7 @@ export const GroupsCourseModal = ({ show, toggleShow }: GroupsCourseModalProps) 
                   <Ptag tag='md' className='modals__text modals__text--pt' style={{ paddingTop: '30px' }}>Продолжительность: индивидуальное количество, уроки 60-70мин</Ptag>
                 }
                 <Ptag tag='md' className='modals__text'>
-                  Стоимость: {values.time === '' && <span style={{ color: 'red', fontWeight: '700' }}>Выберете время</span>}
+                  Стоимость:  <span style={{ color: 'red', fontWeight: '700' }}>{values.groupName === '' ? 'Выберете курс' : values.time === '' ? 'Выберете время' : ''}</span>
                   {values.groupName !== '' && values.time !== '' &&
                     groupsPrice.map(price => Number(values.groupName) === price.id && <span key={price.id}>{price.value} крон/ в месяц</span>)}
                 </Ptag>

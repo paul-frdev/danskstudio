@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IquestionaryForm } from '../common/questionaryForm.interface'
 import { Button, Input } from '../components'
 import { CartList } from '../components/CartList'
@@ -7,9 +7,11 @@ import { Ptag } from '../components/UI/Ptag'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import '../styles/page-components/questionary.scss';
+import cn from 'classnames';
 
 export const Questionary = ({ goal, problem, level, study, languages, time, object, homework, file, name, email, phone, checkbox }: IquestionaryForm) => {
 
+  const [isChecked, setIsChecked] = useState(false);
   const { height, width } = useWindowDimensions();
   const { register, handleSubmit, formState: { errors } } = useForm<IquestionaryForm>();
   const onSubmit = (data: IquestionaryForm) => console.log(data);
@@ -90,10 +92,17 @@ export const Questionary = ({ goal, problem, level, study, languages, time, obje
               , Telegram
             </Ptag>
           </CartList>
-          <Input
-            type='file'
-            placeholder='Прикрепить файл'
-          />
+          <div className='file-wrapper'>
+            <input
+              id='file'
+              className='file'
+              type='file'
+            />
+            <label className='file-label' htmlFor="file">
+              <span> Прикрепить файл</span>
+            </label>
+          </div>
+
           <Input
             type='text'
             label='Ваше имя *'
@@ -111,15 +120,27 @@ export const Questionary = ({ goal, problem, level, study, languages, time, obje
             label='Ваш номер телефона'
             error={errors.phone}
             {...register("phone", { required: { value: true, message: 'Введите ваш телефон' } })}
+            {...register("checkbox", { required: { value: true, message: 'checkbox' } })}
+          // error={errors.checkbox}
           />
-          <div className="checkbox">
-            <Input
-              className='input-checkbox'
-              type='checkbox'
-              label='Я согласен на обработку персональных данных'
-              error={errors.checkbox}
-              {...register("checkbox", { required: { value: true, message: 'checkbox' } })}
-            />
+          <div className="checkbox-container">
+            <label className='checkbox-label'>
+              <Input
+                checked={isChecked}
+                className='checkbox'
+                type='checkbox'
+                onChange={() => {
+                  setIsChecked(!isChecked);
+                }}
+              />
+              <span
+                className={cn('checkbox-custom', {
+                  'checkbox-custom-active': isChecked
+                })}
+                aria-hidden="true"
+              />
+              Я согласен на обработку персональных данных
+            </label>
           </div>
           <div className='button'>
             <Button

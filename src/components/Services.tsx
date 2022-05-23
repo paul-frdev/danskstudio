@@ -22,7 +22,7 @@ export const Services = () => {
 
 
   return (
-    <section className='services' id='services'>
+    <section className='services' id='services' title='review'>
       <MainTitle className='services__title' title='after' position='left'>
         <span> Какие услуги
           <br />
@@ -53,7 +53,7 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
-        <FillFormModal to='questionary'/>
+        {/* <FillFormModal to='questionary'/> */}
     </section>
   )
 }

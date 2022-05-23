@@ -12,7 +12,7 @@ import '../styles/components/reviews.scss';
 
 export const Reviews = () => {
   return (
-    <section className='reviews'>
+    <section className='reviews' id='reviews'>
       <MainTitle className='reviews__title' title='before' position='right'>
         <span>Отзывы о dansk studio</span>
       </MainTitle>

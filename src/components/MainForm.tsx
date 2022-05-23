@@ -20,9 +20,10 @@ export const MainForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
 
   const onSubmit = (data: IFormInput) => console.log(data);
+  
 
   return (
-    <section className='form'>
+    <section className='form' id='main-form'>
       <div>
         <MainTitle className='form__title' title='after' position='left'>
           <span>Узнать расписание</span>

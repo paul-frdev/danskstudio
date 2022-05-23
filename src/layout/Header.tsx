@@ -57,8 +57,8 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
     <header ref={headerRef} className={cn(className, 'header')}
       {...props}
     >
-      <div className={cn("header__container")}>
-        <Link to="/" className={cn('header__logo')}>
+      <div className="header__container">
+        <Link to="/" className='header__logo'>
           <LogoIcon />
         </Link>
         <CgMenuGridR className='menu-icon' onClick={() => setIsOpened(true)} />
@@ -68,7 +68,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
           initial={'closed'}
           animate={isOpened ? 'opened' : 'closed'}
         >
-          <Link to="/" className={cn('header__logo')}>
+          <Link to="/" className='header__logo'>
             <LogoIcon />
           </Link>
           <NavMenu />

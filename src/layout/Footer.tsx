@@ -20,7 +20,7 @@ export const Footer = ({ className }: FooterProps): JSX.Element => {
 
 
   return (
-    <footer className={cn('footer', className)}>
+    <footer className={cn('footer', className)} id='footer'>
       <div className="footer__container">
         <div className="footer__top">
           <Link to='/' className="footer__logo">

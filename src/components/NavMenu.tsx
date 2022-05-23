@@ -1,26 +1,52 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { DetailedHTMLProps, HTMLAttributes, useEffect } from 'react'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import { INavMenu } from '../common/menu.interface';
-import cn from 'classnames';
 import '../styles/components/nav-menu.scss';
 
-interface NavMenuProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 
+interface NavMenuProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 }
 
-export const NavMenu = ({ className, ...props }: NavMenuProps) => {
+export const NavMenu = ({ className, ...props }: NavMenuProps): JSX.Element => {
 
   const { Home, About, Services, Payment, Enroll, Reviews, Contacts } = INavMenu;
+
+  const scrollToSection = (e: any, id: string) => {
+    e.preventDefault();
+    let currentSection = document.getElementById(id);
+    currentSection && currentSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.pushState(id, id);
+  }
+
+  useEffect(() => {
+    let url = window.location.href.split("/");
+    let target = url[url.length - 1].toLowerCase();
+    let element = document.getElementById(target);
+    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <>
-      <nav className={cn('nav')}>
-        <NavLink to='/' className={cn('nav__item')}>{Home}</NavLink>
-        <NavLink to='/about' className={cn('nav__item')}>{About}</NavLink>
-        <NavLink to='/services' className={cn('nav__item')}>{Services}</NavLink>
-        <NavLink to='/payment' className={cn('nav__item')}>{Payment}</NavLink>
-        <NavLink to='/questionary' className={cn('nav__item')}>{Enroll}</NavLink>
-        <NavLink to='/contacts' className={cn('nav__item')}>{Contacts}</NavLink>
-        <NavLink to='/reviews' className={cn('nav__item')}>{Reviews}</NavLink>
+      <nav className='nav'>
+        <NavLink to='/' className='nav__item'>{Home}</NavLink>
+        <NavLink to='/about' className='nav__item'>{About}</NavLink>
+        <NavLink to='/services' className='nav__item'>{Services}</NavLink>
+        <NavLink to='/payment' className='nav__item'>{Payment}</NavLink>
+        <Link
+          to='/'
+          className='nav__item'
+          onClick={e => scrollToSection(e, 'main-form')}
+        >{Enroll}</Link>
+        <Link
+          to='/'
+          className='nav__item'
+          onClick={e => scrollToSection(e, 'footer')}
+        >{Contacts}</Link>
+        <NavLink 
+        to='/reviews' 
+        className='nav__item'
+        onClick={e => scrollToSection(e, 'reviews')}
+        >{Reviews}</NavLink>
       </nav>
     </>
   )
