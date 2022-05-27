@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -9,6 +9,9 @@ import { Button, Ptag } from '../components';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import { Grid } from '@mui/material';
+import DialogActions from '@mui/material/DialogActions';
+import { CloseButton } from '../components/UI/CloseButton';
+
 import '../styles/modals/courses-modals.scss';
 
 interface AuthorCourseModalProps {
@@ -37,6 +40,9 @@ export const AuthorCourseModal = ({ show, toggleShow }: AuthorCourseModalProps):
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
+      <DialogActions>
+        <CloseButton onClose={toggleShow} />
+      </DialogActions>
       <DialogContent>
         <Box className='modals__wrapper'>
           <FormControl fullWidth>

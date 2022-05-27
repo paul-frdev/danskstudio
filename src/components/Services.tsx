@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/services.scss';
 import { CartList } from './CartList';
@@ -13,16 +13,15 @@ import { Button } from './UI/Button';
 
 export const Services = () => {
 
-  const [heightCoordinates, setHeightCoordinates] = useState(0)
+  
+  let elem = document.querySelector('#services');
+  let rect = elem?.getBoundingClientRect();
 
-  const servicesId = document.querySelector('#services');
-
-  const getServicesCoords = servicesId?.getBoundingClientRect();
-  console.log(getServicesCoords);
-
+  console.log('rect', rect);
+  
 
   return (
-    <section className='services' id='services' title='review'>
+    <section className='services' id='services'>
       <MainTitle className='services__title' title='after' position='left'>
         <span> Какие услуги
           <br />
@@ -53,7 +52,7 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
-        {/* <FillFormModal to='questionary'/> */}
+      {/* <FillFormModal to='questionary'/> */}
     </section>
   )
 }

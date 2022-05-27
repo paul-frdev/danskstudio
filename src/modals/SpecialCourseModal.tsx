@@ -9,6 +9,9 @@ import { Button, Ptag } from '../components';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import { Grid } from '@mui/material';
+import DialogActions from '@mui/material/DialogActions';
+import { CloseButton } from '../components/UI/CloseButton';
+
 import '../styles/modals/courses-modals.scss';
 
 interface SpecialCourseModalProps {
@@ -18,8 +21,6 @@ interface SpecialCourseModalProps {
 export const SpecialCourseModal = ({ show, toggleShow }: SpecialCourseModalProps) => {
 
   const [values, setValues] = React.useState({ groupName: '', time: '', price: '' });
-
-  console.log(values);
 
   return (
     <>
@@ -40,6 +41,9 @@ export const SpecialCourseModal = ({ show, toggleShow }: SpecialCourseModalProps
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
+        <DialogActions>
+          <CloseButton onClose={toggleShow} />
+        </DialogActions>
         <DialogContent>
           <Box className='modals__wrapper'>
             <FormControl fullWidth>

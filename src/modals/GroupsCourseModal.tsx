@@ -9,6 +9,9 @@ import { Button, Ptag } from '../components';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import { Grid } from '@mui/material';
+import DialogActions from '@mui/material/DialogActions';
+import { CloseButton } from '../components/UI/CloseButton';
+
 import '../styles/modals/courses-modals.scss';
 interface GroupsCourseModalProps {
   show: boolean;
@@ -18,7 +21,6 @@ export const GroupsCourseModal = ({ show, toggleShow }: GroupsCourseModalProps) 
 
   const [values, setValues] = React.useState({ groupName: '', time: '', price: '' });
 
-  //className='courses-modals'
   return (
     <>
       <Dialog
@@ -38,6 +40,9 @@ export const GroupsCourseModal = ({ show, toggleShow }: GroupsCourseModalProps) 
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
+        <DialogActions>
+          <CloseButton onClose={toggleShow} />
+        </DialogActions>
         <DialogContent>
           <Box className='modals__wrapper'>
             <FormControl fullWidth>
@@ -79,15 +84,15 @@ export const GroupsCourseModal = ({ show, toggleShow }: GroupsCourseModalProps) 
                     groupsPrice.map(price => Number(values.groupName) === price.id && <span key={price.id}>{price.value} крон/ в месяц</span>)}
                 </Ptag>
               </>
-                <Grid display='flex' justifyContent='center' marginTop='20px'>
-                  <Button
-                    border='md'
-                    borderColor='yellow'
-                    boxShadow='yellow'
-                    onClick={toggleShow}
-                    disabled={!values.groupName || !values.time}
-                  >Оплатить</Button>
-                </Grid>
+              <Grid display='flex' justifyContent='center' marginTop='20px'>
+                <Button
+                  border='md'
+                  borderColor='yellow'
+                  boxShadow='yellow'
+                  onClick={toggleShow}
+                  disabled={!values.groupName || !values.time}
+                >Оплатить</Button>
+              </Grid>
             </FormControl>
           </Box>
         </DialogContent>
