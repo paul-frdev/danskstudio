@@ -26,7 +26,7 @@ export const NavMenu = ({ open, className, ...props }: NavMenuProps): JSX.Elemen
       open(false)
     }
 
-    if (pathname === '/about' || pathname === '/services' || pathname === '/services/speaking' || pathname === '/services/lessons' || pathname === '/services/groups' || pathname === '/payment') {
+    if (pathname !== '/') {
       return navigate('/')
     }
   }
