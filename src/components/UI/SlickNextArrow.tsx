@@ -1,22 +1,18 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
+import React from 'react';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
 import cn from 'classnames';
 import '../../styles/index.scss';
+import { CustomArrowProps } from 'react-slick';
 
-
-interface SlickNextArrowProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	onClick?: () => void;
-}
-
-export const SlickNextArrow = ({ className, onClick, ...props }: SlickNextArrowProps): JSX.Element => {
+export const SlickNextArrow = ({currentSlide, slideCount, className, onClick, ...props }: CustomArrowProps): JSX.Element => {
 
 	return (
-		<div
+		<button
 			className={cn('button-next', className)}
 			onClick={onClick}
 			{...props}
 		>
 			<MdOutlineArrowForwardIos />
-		</div>
+		</button>
 	);
 }

@@ -1,21 +1,34 @@
 import React, { DetailedHTMLProps, HTMLAttributes, useEffect } from 'react'
-import { NavLink, Link, useLocation } from 'react-router-dom'
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
 import { INavMenu } from '../common/menu.interface';
 import '../styles/components/nav-menu.scss';
 
 
 interface NavMenuProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  open?: (value: boolean) => void;
 }
 
-export const NavMenu = ({ className, ...props }: NavMenuProps): JSX.Element => {
+export const NavMenu = ({ open, className, ...props }: NavMenuProps): JSX.Element => {
+
+  const { pathname } = useLocation();
+  let navigate = useNavigate();
 
   const { Home, About, Services, Payment, Enroll, Reviews, Contacts } = INavMenu;
+
 
   const scrollToSection = (e: any, id: string) => {
     e.preventDefault();
     let currentSection = document.getElementById(id);
     currentSection && currentSection.scrollIntoView({ behavior: "smooth", block: "start" });
     window.history.pushState(id, id);
+
+    if (open) {
+      open(false)
+    }
+
+    if (pathname === '/about' || pathname === '/services' || pathname === '/services/speaking' || pathname === '/services/lessons' || pathname === '/services/groups' || pathname === '/payment') {
+      return navigate('/')
+    }
   }
 
   useEffect(() => {
@@ -42,11 +55,11 @@ export const NavMenu = ({ className, ...props }: NavMenuProps): JSX.Element => {
           className='nav__item'
           onClick={e => scrollToSection(e, 'footer')}
         >{Contacts}</Link>
-        <NavLink 
-        to='/reviews' 
-        className='nav__item'
-        onClick={e => scrollToSection(e, 'reviews')}
-        >{Reviews}</NavLink>
+        <Link
+          to='/reviews'
+          className='nav__item'
+          onClick={e => scrollToSection(e, 'reviews')}
+        >{Reviews}</Link>
       </nav>
     </>
   )

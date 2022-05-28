@@ -1,7 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes, useEffect, useRef, useState } from 'react';
-import '../styles/layout/header.scss';
-import cn from 'classnames';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../images/logo.svg';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -10,6 +8,8 @@ import { CgMenuGridR } from 'react-icons/cg';
 import { motion } from 'framer-motion';
 import { MdOutlineCloseFullscreen } from 'react-icons/md';
 import { NavMenu } from '../components/NavMenu';
+import '../styles/layout/header.scss';
+import cn from 'classnames';
 
 interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 
@@ -18,12 +18,7 @@ interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 
   const [isOpened, setIsOpened] = useState(false);
-  const params = useParams();
-
-
-  useEffect(() => {
-    setIsOpened(false)
-  }, [params])
+  const { pathname } = useLocation();
 
   const variants = {
     opened: {
@@ -53,6 +48,10 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
     };
   }, []);
 
+  useEffect(() => {
+    setIsOpened(false);
+  }, [pathname])
+
   return (
     <header ref={headerRef} className={cn(className, 'header')}
       {...props}
@@ -71,10 +70,10 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
           <Link to="/" className='header__logo'>
             <LogoIcon />
           </Link>
-          <NavMenu />
+          <NavMenu open={setIsOpened}/>
           <MdOutlineCloseFullscreen className='mobile-menu__close' onClick={() => setIsOpened(false)} />
         </motion.div>
-        <NavMenu />
+        <NavMenu open={setIsOpened}/>
         <div className='header__social'>
           <a href="/" className="header__link">
             <FaTelegramPlane className='header__icon' />

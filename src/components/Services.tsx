@@ -13,14 +13,6 @@ import { Button } from './UI/Button';
 
 export const Services = () => {
 
-
-  let elem = document.querySelector('#services');
-  let rect = elem?.getBoundingClientRect();
-
-  console.log('rect', rect);
-
-
-
   return (
     <section className='services' id='services'>
       <MainTitle className='services__title' title='after' position='left'>
