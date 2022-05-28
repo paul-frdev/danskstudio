@@ -9,6 +9,7 @@ import { AboutPage } from '../pages/AboutPage';
 import { ContactsPage } from '../pages/ContactsPage';
 import { MainPage } from '../pages/MainPage';
 import { PaymentPage } from '../pages/PaymentPage';
+import { Questionary } from '../pages/Questionary';
 import { ReviewsPage } from '../pages/ReviewsPage';
 import { ServicesPage } from '../pages/ServicesPage';
 
@@ -25,7 +26,7 @@ export const MainRoutes = () => {
           <Route path='groups' element={<Groups />} />
         </Route>
         <Route path='payment' element={<PaymentPage />} />
-        {/* <Route path='questionary' element={<Questionary />} /> */}
+        <Route path='questionary' element={<Questionary />} />
         <Route path='contacts' element={<ContactsPage />} />
         <Route path='reviews' element={<ReviewsPage />} />
         <Route path='*' element={<NotFound />} />

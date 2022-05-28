@@ -113,7 +113,7 @@
 
   @media screen and(max-width: 870px) {
     &__top {
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(7, 1fr);
     }
     &__contacts {
       grid-column: 3 span;

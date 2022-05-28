@@ -18,7 +18,7 @@ export const LevelsServices = () => {
   const displayHide = width < 530 ? 'hide' : 'show';
 
   return (
-    <div className='levels-services'>
+    <section className='levels-services'>
       {width < 400 ? <MainTitle className='levels-services__title'>УСЛУГИ <br /> DANSK STUDIO</MainTitle>
         :
         <MainTitle className='levels-services__title'>УСЛУГИ DANSK STUDIO</MainTitle>
@@ -65,6 +65,6 @@ export const LevelsServices = () => {
           <Outlet />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

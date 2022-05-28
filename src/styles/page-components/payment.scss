@@ -1,5 +1,6 @@
 .payment {
-    margin-bottom: 40px;
+  margin-top: 161px;
+  margin-bottom: 40px;
   &__container {
     max-width: 1400px;
     padding: 0 15px;
@@ -11,7 +12,7 @@
     padding: 0 40px;
 
     p {
-        font-size: 18px;
+      font-size: 18px;
       &:nth-child(5) {
         margin-bottom: 40px;
       }
@@ -53,24 +54,24 @@
 
     p {
       font-size: 16px;
-    &:nth-child(5) {
-      margin-bottom: 20px;
+      &:nth-child(5) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(6) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(7) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(8) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(9) {
+        margin-bottom: 40px;
+      }
+      &:nth-child(10) {
+        margin-bottom: 20px;
+      }
     }
-    &:nth-child(6) {
-      margin-bottom: 20px;
-    }
-    &:nth-child(7) {
-      margin-bottom: 20px;
-    }
-    &:nth-child(8) {
-      margin-bottom: 20px;
-    }
-    &:nth-child(9) {
-      margin-bottom: 40px;
-    }
-    &:nth-child(10) {
-      margin-bottom: 20px;
-    }
-  }
   }
 }

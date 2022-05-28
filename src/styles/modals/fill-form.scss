@@ -1,3 +1,38 @@
-.fill-form {
-    
+.fill-form-modal {
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    max-width: 662px;
+    filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.25));
+    border: 1px solid #c90c31;
+    border-radius: 15px;
+  }
+  .css-qfso29-MuiTypography-root-MuiDialogContentText-root {
+    max-width: 385px;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-black);
+  }
+  .css-hlj6pa-MuiDialogActions-root:last-child {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: 200px;
+    background: var(--bg-light);
+    border: 3px solid var(--bg-yellow);
+    box-shadow: -4px -4px 20px rgba(244, 232, 218, 0.1),
+      4px 4px 20px rgba(244, 232, 218, 0.1);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
 }

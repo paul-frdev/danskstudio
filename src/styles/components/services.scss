@@ -80,6 +80,10 @@
   .services {
     &__title {
       margin: 25px 0 !important;
+      span {
+        font-size: 26px !important;
+        line-height: 30px;
+      }
     }
     &__wrapper {
       max-width: 1249px;
@@ -90,16 +94,6 @@
 
     &__cart {
       max-width: 430px;
-    }
-  }
-}
-
-@media screen and(max-width: 910px) {
-  .services {
-    &__title {
-      span {
-        font-size: 26px !important;
-      }
     }
   }
 }

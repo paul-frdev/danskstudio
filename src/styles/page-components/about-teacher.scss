@@ -1,4 +1,5 @@
 .about-teacher {
+  margin-top: 132px;
   margin-bottom: 60px;
   &__container {
     max-width: 1400px;
@@ -77,6 +78,7 @@
   @media screen and(max-width: 600px) {
     &__title {
       font-size: 25px;
+      line-height: 30px;
       margin: 20px 0;
     }
   }
@@ -92,6 +94,7 @@
     }
     &__title {
       font-size: 17px;
+      line-height: 24px;
     }
   }
 }

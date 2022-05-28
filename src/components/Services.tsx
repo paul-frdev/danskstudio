@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/services.scss';
 import { CartList } from './CartList';
@@ -13,12 +13,13 @@ import { Button } from './UI/Button';
 
 export const Services = () => {
 
-  
+
   let elem = document.querySelector('#services');
   let rect = elem?.getBoundingClientRect();
 
   console.log('rect', rect);
-  
+
+
 
   return (
     <section className='services' id='services'>
@@ -52,7 +53,6 @@ export const Services = () => {
           </CartList>
         </div>
       </div>
-      {/* <FillFormModal to='questionary'/> */}
     </section>
   )
 }
