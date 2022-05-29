@@ -1,24 +1,4 @@
 .fill-form-modal {
-  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-    max-width: 662px;
-    filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.25));
-    border: 1px solid #c90c31;
-    border-radius: 15px;
-  }
-  .css-qfso29-MuiTypography-root-MuiDialogContentText-root {
-    max-width: 385px;
-    text-align: center;
-    padding-top: 15px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--color-black);
-  }
-  .css-hlj6pa-MuiDialogActions-root:last-child {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
   &-link {
     display: flex;
     justify-content: center;
