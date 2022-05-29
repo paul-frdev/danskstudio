@@ -1,4 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
+import errorIcon from '../images/error-icon.png';
+import '../styles/components/error-boundary.scss';
 
 interface Props {
     children: ReactNode;
@@ -23,7 +25,13 @@ class ErrorBoundary extends Component<Props, State> {
 
     public render() {
         if (this.state.hasError) {
-            return <h1>Sorry.. there was an error</h1>;
+            return (
+                <div className='error-bundary'>
+                    <img src={errorIcon} alt='error-img' />
+                    <h3>Oops... Something went wrong</h3>
+                    <p>Please, try again later...</p>
+                </div>
+            );
         }
 
         return this.props.children;

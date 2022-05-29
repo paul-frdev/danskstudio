@@ -1,0 +1,36 @@
+.error-bundary {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  img {
+    max-width: 290px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  h3,
+  p {
+    text-align: center;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 470px) {
+      h3 {
+          font-size: 24px;
+          text-align: left;
+      }
+      p {
+          font-size: 20px;
+          text-align: left;
+      }
+  }
+}

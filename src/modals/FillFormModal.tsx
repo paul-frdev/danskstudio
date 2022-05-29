@@ -10,10 +10,9 @@ import '../styles/modals/fill-form.scss';
 interface FillFormModalProps {
   show: boolean;
   toggleShow: () => void;
-  href?: string;
 }
 
-export const FillFormModal: React.FC<FillFormModalProps> = ({toggleShow, show, href }) => {
+export const FillFormModal: React.FC<FillFormModalProps> = ({toggleShow, show }) => {
 
 
   return (
